@@ -1,0 +1,21 @@
+{
+  "name": "axel-gillino.com",
+  "version": "0.0.0",
+  "homepage": "https://github.com/singnurkar/axel-gillino.com",
+  "authors": [
+    "Akshay Singnurkar <akshaysingnurkar@gmail.com>"
+  ],
+  "description": "Rebuild of axel-gillino.com",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.2",
+    "neat": "~1.7.2"
+  }
+}
