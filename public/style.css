@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%; }
+
+body {
+  padding: 10px; }
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-position: 50% 0;
+  background-color: white; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+#landing {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  width: 100%;
+  background: url("landing.jpg") center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 0;
+  position: relative;
+  background-position: 50% 0;
+  color: white; }
+  #landing::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #landing h1 {
+    margin: 0;
+    padding: 0; }
+
+.header-desktop .brand-desktop {
+  float: left; }
+.header-desktop #nav-desktop {
+  float: right; }
+  .header-desktop #nav-desktop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .header-desktop #nav-desktop ul li {
+      display: inline; }
+
+#gallery .slide-selector ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

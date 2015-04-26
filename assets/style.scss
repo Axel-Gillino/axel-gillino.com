@@ -1,0 +1,115 @@
+@import "lib/variables";
+@import "lib/mixins";
+@import "vendors/bourbon/app/assets/stylesheets/bourbon";
+@import "vendors/neat/app/assets/stylesheets/neat";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	@include height-width(100%, 100%);
+}
+
+body {
+	padding: 10px;
+}
+
+@mixin parallax() {
+	position: relative;
+	background-position: 50% 0;
+}
+
+.container {
+	@include outer-container(100%);
+	@include parallax();
+	
+	background-color: white;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#landing {
+	@include outer-container(100%);
+	@include height-width(90%, 100%);
+
+	background: url('landing.jpg') center;	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 0;
+
+	@include parallax();
+
+	color: white;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
+
+	.lead {}
+}
+
+.header-desktop {
+	.brand-desktop {
+		float: left;
+	}
+
+	#nav-desktop {
+		float: right;
+
+		ul {
+			@include inline-nav();
+		}
+	}
+}
+
+#story {}
+.copy-large {}
+
+/// GALLERY
+
+#gallery {
+	.slide {
+		.slide-media {}
+		.slide-copy {}
+		.slide-copy {}
+		.slide-title {}
+		.slide-source {}
+	}
+
+	.slide-selector {
+		ul {
+			@include plain-ul()
+		}
+	}
+}
+
+/// GRID
+.grid {}
+.grid-item {}
+
+/// SKILLS
+
+#skills {}
+#skills-grid {}
+
+/// WORK
+
+#work {}
+#work-grid {}
+
+.work-header {
+	.work-header-bg {}
+	.work-header-title {}
+	.work-header-subtext {}
+}
+
+
+
+
+

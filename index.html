@@ -11,18 +11,62 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="./public/style.css">
 
     </head>
     <body>
+        <div id="landing">
+            <h1>Axel Gillino</h1>
+            <p class="lead">Designer &amp; Interactive Art Director</p>
+        </div>
 
         <div class="container">
-            <section id="hero">
+            <header class="header-desktop">
+                <div class="brand-desktop">
+                    AG
+                </div>
+
+                <nav id="nav-desktop">
+                    <ul>
+                        <li><a href="#">Dribble</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Let's Talk</a></li>
+                    </ul>
+                </nav>
+                
+                <span class="clearfix"></span>
+            </header>
+
+            <section id="story">
+                <p class="copy-large">Originally from France &amp; currently living in Montreal, multimedia engineering and design graduate, passionate about ideas, experience and communication though good design.</p>
             </section>
 
-            <section id="header">
-                <nav id="nav-desktop">
-                </nav>
-                <!-- <nav id="nav-mobile"></nav> -->
+            <section id="gallery">
+                <div id="slide-1" class="slide">
+                    <div class="slide-media">
+                    </div>
+
+                    <div class="slide-copy">
+                        <span class="slide-title" Barpass <em>2014</em></span>
+                        <span class="slide-source">from Behance</span>
+                    </div>
+                </div>
+
+                <div class="slide-selector">
+                    <ul>
+                        <!-- 8 max -->
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                        <li>&mdash;</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="skills">
@@ -31,17 +75,32 @@
             </section>
 
             <section id="work">
+                <div class="work-header">
+                    <div class="work-header-bg">
+                        9
+                    </div>
+
+                    <div class="work-header-title">
+                        Work Samples
+                    </div>
+
+                    <div class="work-header-subtext">
+                        dribbble
+                    </div>
+                </div><!-- /#work-header -->
+
                 <div id="work-grid" class="grid">
-                </div>
+                    <!-- work-grid-item -->
+                    <!-- /work-grid-item -->
+                </div><!-- /#work-grid -->
             </section>
 
         </div>
 
-        <script src="//code.jquery.com/jquery-2.1.3.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js"></script>
+        <script type="text/javascript" src="./public/main.js"></script>
         <script type="text/javascript">
-
-
         </script>
 
         <!-- Google Analytics -->
