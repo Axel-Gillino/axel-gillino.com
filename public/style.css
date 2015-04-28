@@ -88,7 +88,8 @@ body {
     width: 800px; }
     #gallery .slide .slide-media {
       background: url("./barpass.png");
-      height: 500px; }
+      min-height: 250px;
+      max-height: 500px; }
     #gallery .slide .slide-title {
       font-size: 2em; }
     #gallery .slide .slide-source {
@@ -97,6 +98,29 @@ body {
     list-style: none;
     padding: 0;
     margin: 0; }
+
+#skills-grid {
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: auto; }
+  #skills-grid::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #skills-grid .skill-name {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #skills-grid .skill-name:last-child {
+      margin-right: 0; }
+  #skills-grid .skills-col {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #skills-grid .skills-col:last-child {
+      margin-right: 0; }
 
 .work-header {
   text-align: center; }

@@ -99,7 +99,8 @@ body {
 
 		.slide-media {
 			background: url('./barpass.png');
-			height: 500px;
+			min-height: 250px;
+			max-height: 500px;
 		}
 
 		.slide-copy {}
@@ -126,7 +127,19 @@ body {
 /// SKILLS
 
 #skills {}
-#skills-grid {}
+#skills-grid {
+	@include outer-container(96%);
+
+	.skill-name {
+		@include span-columns(3)
+	}
+
+	.skills-col {
+		@include span-columns(3)
+	}
+}
+
+
 
 /// WORK
 
