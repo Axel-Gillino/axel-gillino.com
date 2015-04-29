@@ -14,6 +14,10 @@ body {
 	padding: 10px;
 }
 
+section {
+	padding: 8% 0 8% 0;
+}
+
 @mixin parallax() {
 	position: relative;
 	background-position: 50% 0;
@@ -40,7 +44,6 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: 50% 0;
 
 	@include parallax();
 
@@ -94,50 +97,84 @@ body {
 
 	.slide {
 		float: left;
-		margin-left: 50px;
-		width: 800px;
+		// margin-left: 50px;
+		// width: 800px;
+
+		@include shift(1);
+		@include span-columns(8);
 
 		.slide-media {
-			background: url('./barpass.png');
-			min-height: 250px;
-			max-height: 500px;
+			img {
+				height: 100%;
+				width: 100%;
+			}
 		}
 
-		.slide-copy {}
-		.slide-title {
-			font-size: 2em;
+		.slide-info {
+			padding-top: 10%;
+
+			.slide-title {
+				float: left;
+				font-size: 4em;
+				font-weight: 900;
+
+				em {
+					font-size: 0.3em;
+					font-weight: 400;
+					color: lightgray;
+				}
+			}
+
+			.slide-source {
+				float: right;
+				padding-top: 3em;
+				height: 100%;
+				vertical-align: text-bottom;
+			}
 		}
 
-		.slide-source {
-			float: right;
-		}
+
 	}
 
 	.slide-selector {
+		@include span-columns(2);
 		ul {
-			@include plain-ul()
+			@include plain-ul();
 		}
 	}
 }
 
 /// GRID
-.grid {}
+.grid {
+	@include outer-container(96%);
+}
 .grid-item {}
+
+.section-title {
+	@include span-columns(3);
+	padding-left: 5%;
+}
+
+.col {
+	@include span-columns(3);
+}
+
+.cell {
+	@include span-columns(12);
+}
 
 /// SKILLS
 
-#skills {}
-#skills-grid {
-	@include outer-container(96%);
+#skills {
 
-	.skill-name {
-		@include span-columns(3)
-	}
-
-	.skills-col {
-		@include span-columns(3)
-	}
 }
+
+#skills-grid {
+
+
+}
+
+/// EXPERIENCE
 
 
 
@@ -173,8 +210,6 @@ body {
 }
 
 #work-grid {
-	@include outer-container(96%);
-	
 	.grid-item{
 		@include span-columns(4);
 		margin-top: 2.35765%;

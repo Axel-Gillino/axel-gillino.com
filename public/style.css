@@ -14,6 +14,9 @@ html, body {
 body {
   padding: 10px; }
 
+section {
+  padding: 8% 0 8% 0; }
+
 .container {
   max-width: 100%;
   margin-left: auto;
@@ -41,7 +44,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 50% 0;
   position: relative;
   background-position: 50% 0;
   color: white; }
@@ -84,43 +86,76 @@ body {
     display: table; }
   #gallery .slide {
     float: left;
-    margin-left: 50px;
-    width: 800px; }
-    #gallery .slide .slide-media {
-      background: url("./barpass.png");
-      min-height: 250px;
-      max-height: 500px; }
-    #gallery .slide .slide-title {
-      font-size: 2em; }
-    #gallery .slide .slide-source {
-      float: right; }
-  #gallery .slide-selector ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    #gallery .slide:last-child {
+      margin-right: 0; }
+    #gallery .slide .slide-media img {
+      height: 100%;
+      width: 100%; }
+    #gallery .slide .slide-info {
+      padding-top: 10%; }
+      #gallery .slide .slide-info .slide-title {
+        float: left;
+        font-size: 4em;
+        font-weight: 900; }
+        #gallery .slide .slide-info .slide-title em {
+          font-size: 0.3em;
+          font-weight: 400;
+          color: lightgray; }
+      #gallery .slide .slide-info .slide-source {
+        float: right;
+        padding-top: 3em;
+        height: 100%;
+        vertical-align: text-bottom; }
+  #gallery .slide-selector {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    #gallery .slide-selector:last-child {
+      margin-right: 0; }
+    #gallery .slide-selector ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
 
-#skills-grid {
+.grid {
   max-width: 96%;
   margin-left: auto;
   margin-right: auto; }
-  #skills-grid::after {
+  .grid::after {
     clear: both;
     content: "";
     display: table; }
-  #skills-grid .skill-name {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    #skills-grid .skill-name:last-child {
-      margin-right: 0; }
-  #skills-grid .skills-col {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    #skills-grid .skills-col:last-child {
-      margin-right: 0; }
+
+.section-title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  padding-left: 5%; }
+  .section-title:last-child {
+    margin-right: 0; }
+
+.col {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .col:last-child {
+    margin-right: 0; }
+
+.cell {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .cell:last-child {
+    margin-right: 0; }
 
 .work-header {
   text-align: center; }
@@ -143,33 +178,25 @@ body {
 #work {
   background-color: #4d4d4d; }
 
-#work-grid {
-  max-width: 96%;
-  margin-left: auto;
-  margin-right: auto; }
-  #work-grid::after {
-    clear: both;
-    content: "";
-    display: table; }
-  #work-grid .grid-item {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-top: 2.35765%;
-    margin-bottom: 2.35765%;
-    height: 250px;
-    background: url(./planet_1x.png); }
-    #work-grid .grid-item:last-child {
-      margin-right: 0; }
-    #work-grid .grid-item .work-overlay {
-      display: none;
-      background-color: rgba(0, 0, 0, 0.7);
-      text-align: center;
-      height: 100%;
-      width: 100%; }
-      #work-grid .grid-item .work-overlay a {
-        display: block;
-        padding-top: 10%; }
+#work-grid .grid-item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-top: 2.35765%;
+  margin-bottom: 2.35765%;
+  height: 250px;
+  background: url(./planet_1x.png); }
+  #work-grid .grid-item:last-child {
+    margin-right: 0; }
+  #work-grid .grid-item .work-overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    height: 100%;
+    width: 100%; }
+    #work-grid .grid-item .work-overlay a {
+      display: block;
+      padding-top: 10%; }
 
 /*# sourceMappingURL=style.css.map */

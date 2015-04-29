@@ -94,32 +94,9 @@ var data = {
 };
 
 (function($) {
+	'use strict'
 
-	var skillsColumn = function(data) {
-		this.data = data || {}
-		this.tpl  = '<div class="skill-col"></div>'
-		this.children = []
-		this.el
-
-		this.append = function(el) {
-			this.el.append(el)
-		}
-
-		this.empty = function() {
-			this.children = []
-		}
-
-		this.destroy = function() {
-			this.el.remove()
-		}
-
-		this.render = function() {
-			this.el = $(this.tpl)	
-			return this.el
-		}
-	}
-
-	var skillCell = function(data) {
+	var SkillCell = function(data) {
 		this.data = data || {}
 		this.tpl  = '<div class="skill-name"></div>'
 		this.el
@@ -135,6 +112,42 @@ var data = {
 		}
 	}
 
+	var SkillsColumn = function(children) {
+		this.children = children || []
+		this.tpl  	  = '<div class="skill-col"></div>'
+		this.el		  = $(this.tpl)
+
+		this.append = function(el) {
+			this.el.append(el)
+			return this
+		}
+
+		this.empty = function() {
+			this.children = []
+			return this
+		}
+
+		this.destroy = function() {
+			this.el.remove()
+		}
+
+		this.render = function() {
+			this.el = $(this.tpl)	
+			return this.el
+		}
+	}
+
+	// var cell = new SkillCell({ skill: 'asdf' })
+	// console.log(cell)
+	// cell.render()
+	// var col = new SkillsColumn()
+	// console.log(col)
+	// col.render()
+	// var renderedCol = col.append( cell.render() )
+	// console.log(renderedCol)
+	// $('#skills-grid').append(col.render())
+
+
 	$(window).scroll(function() {
 		var yPos = -($(window).scrollTop() / 15)
 		var bgpos = '50% '+ yPos + 'px'
@@ -145,26 +158,10 @@ var data = {
 		$('.container').css('background-position', bgpos2)
 	})
 
-	// var $workGrid = $('#work-grid')
-
-	// $workGrid
-	// 	.children('.grid-item')
-	// 	.on('mouseenter', function(e) {
-	// 		$(this).children('.work-overlay').fadeIn(250)
-	// 	})		
-
-	// $workGrid
-	// 	.children('.grid-item')
-	// 	$(e.target).on('mouseleave', function(e) {
-	// 	$(e.target).fadeOut(250)
-	// })
-
-	$('.grid-item')
-		.on('mouseenter', function(e) {
-			$(this).find('.work-overlay').fadeIn(250)
-		})
-		.on('mouseleave', function(e) {
-			$(this).find('.work-overlay').fadeOut(250)
-		})
+	$('.grid-item').on('mouseenter', function(e) {
+		$(this).find('.work-overlay').fadeIn(250)
+	}).on('mouseleave', function(e) {
+		$(this).find('.work-overlay').fadeOut(250)
+	})
 
 })(jQuery);
