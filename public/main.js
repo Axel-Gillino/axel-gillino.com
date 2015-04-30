@@ -96,66 +96,14 @@ var data = {
 (function($) {
 	'use strict'
 
-	var SkillCell = function(data) {
-		this.data = data || {}
-		this.tpl  = '<div class="skill-name"></div>'
-		this.el
-
-		this.destroy = function() {
-			this.el.remove()
-		}
-
-		this.render = function() {
-			this.el = $(this.tpl)
-			this.el.text = data.skill
-			return this.el
-		}
-	}
-
-	var SkillsColumn = function(children) {
-		this.children = children || []
-		this.tpl  	  = '<div class="skill-col"></div>'
-		this.el		  = $(this.tpl)
-
-		this.append = function(el) {
-			this.el.append(el)
-			return this
-		}
-
-		this.empty = function() {
-			this.children = []
-			return this
-		}
-
-		this.destroy = function() {
-			this.el.remove()
-		}
-
-		this.render = function() {
-			this.el = $(this.tpl)	
-			return this.el
-		}
-	}
-
-	// var cell = new SkillCell({ skill: 'asdf' })
-	// console.log(cell)
-	// cell.render()
-	// var col = new SkillsColumn()
-	// console.log(col)
-	// col.render()
-	// var renderedCol = col.append( cell.render() )
-	// console.log(renderedCol)
-	// $('#skills-grid').append(col.render())
-
-
 	$(window).scroll(function() {
 		var yPos = -($(window).scrollTop() / 15)
-		var bgpos = '50% '+ yPos + 'px'
-		$('#landing').css('background-position', bgpos)
+		var bgPos = '50% '+ yPos + 'px'
+		$('#landing').css('background-position', bgPos)
 
 		var yPos2 = -($(window).scrollTop() / 10)
-		var bgpos2 = '50% '+ yPos2 + 'px'
-		$('.container').css('background-position', bgpos2)
+		var bgPos2 = '50% '+ yPos2 + 'px'		
+		$('.container').css('background-position', bgPos2)
 	})
 
 	$('.grid-item').on('mouseenter', function(e) {

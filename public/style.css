@@ -141,12 +141,66 @@ section {
   .section-title:last-child {
     margin-right: 0; }
 
-.col {
+.row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: 0; }
+  .row:last-child {
+    margin-right: 0; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#current-employer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  margin-right: 0; }
+  #current-employer:last-child {
+    margin-right: 0; }
+
+#employment-details {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  #employment-details:last-child {
+    margin-right: 0; }
+
+.accordian-label {
+  padding: 2em;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+  .accordian-label span {
+    padding: 0;
+    margin: 0;
+    float: right;
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 0; }
+
+.col-4-5 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .col-4-5:last-child {
+    margin-right: 0; }
+
+.col-1-3 {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%; }
-  .col:last-child {
+  .col-1-3:last-child {
     margin-right: 0; }
 
 .cell {
