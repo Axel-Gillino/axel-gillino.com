@@ -1,3 +1,8 @@
+@mixin parallax() {
+	position: relative;
+	background-position: 50% 0;
+}
+
 @mixin plain-ul() {
 	list-style: none;
 	padding: 0;

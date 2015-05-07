@@ -1,0 +1,18 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'bower' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose node symlink /usr/bin/node
+5 error Error: EACCES, mkdir '/usr/local/npm'
+5 error  { [Error: EACCES, mkdir '/usr/local/npm'] errno: 3, code: 'EACCES', path: '/usr/local/npm' }
+6 error Please try running this command again as root/Administrator.
+7 error System Linux 3.16.0-28-generic
+8 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "bower"
+9 error cwd /home/shay/axel-gillino.com
+10 error node -v v0.10.38
+11 error npm -v 1.4.28
+12 error path /usr/local/npm
+13 error code EACCES
+14 error errno 3
+15 error stack Error: EACCES, mkdir '/usr/local/npm'
+16 verbose exit [ 3, true ]

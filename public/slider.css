@@ -1,0 +1,251 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html, body {
+  background: black; }
+
+body {
+  padding: 10px 10px 0 10px; }
+
+#landing {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  width: 100%;
+  background: url("landing.png") center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  background-position: 50% 0;
+  color: white; }
+  #landing::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #landing h1 {
+    margin: 0;
+    padding: 0; }
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-position: 50% 0;
+  background-color: white; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+header #brand {
+  float: left; }
+  header #brand img {
+    margin: 15px;
+    height: 80px; }
+header #nav {
+  float: right; }
+  header #nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 37px 50px 0 0; }
+    header #nav ul li {
+      display: inline; }
+    header #nav ul li a {
+      padding: 0 10px 0 10px;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      font-weight: 700;
+      color: black;
+      text-decoration: none; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.row-title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  text-align: right; }
+  .row-title:last-child {
+    margin-right: 0; }
+
+.row-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .row-content:last-child {
+    margin-right: 0; }
+
+.ul-col {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .ul-col:last-child {
+    margin-right: 0; }
+  .ul-col li {
+    text-decoration: none; }
+
+#gallery {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #gallery:last-child {
+    margin-right: 0; }
+  #gallery .slide {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    #gallery .slide:last-child {
+      margin-right: 0; }
+    #gallery .slide .slide-media img {
+      width: 100%; }
+    #gallery .slide .slide-info {
+      padding-top: 10%; }
+      #gallery .slide .slide-info .slide-title {
+        float: left;
+        font-size: 4em;
+        font-weight: 900; }
+        #gallery .slide .slide-info .slide-title em {
+          font-size: 0.3em;
+          font-weight: 400;
+          color: lightgray; }
+      #gallery .slide .slide-info .slide-source {
+        float: right;
+        padding-top: 3em;
+        vertical-align: text-bottom; }
+  #gallery .slide-selector {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%; }
+    #gallery .slide-selector:last-child {
+      margin-right: 0; }
+    #gallery .slide-selector ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+
+#current-position {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #current-position:last-child {
+    margin-right: 0; }
+  #current-position h6 {
+    margin: 0;
+    padding: 0; }
+  #current-position #current-employer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    #current-position #current-employer:last-child {
+      margin-right: 0; }
+    #current-position #current-employer #employer-logo img {
+      width: 100%; }
+  #current-position #employment-details {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    #current-position #employment-details:last-child {
+      margin-right: 0; }
+
+.dropdown {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  background-color: white; }
+  .dropdown:last-child {
+    margin-right: 0; }
+  .dropdown .dropdown-row {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .dropdown .dropdown-row:last-child {
+      margin-right: 0; }
+    .dropdown .dropdown-row .time-and-place {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .dropdown .dropdown-row .time-and-place:last-child {
+        margin-right: 0; }
+    .dropdown .dropdown-row .position-info {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      .dropdown .dropdown-row .position-info:last-child {
+        margin-right: 0; }
+
+#work {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  background-color: #4d4d4d; }
+  #work:last-child {
+    margin-right: 0; }
+  #work .work-header {
+    text-align: center; }
+    #work .work-header .work-header-bg {
+      z-index: -1;
+      font-size: 15em;
+      color: #5a5a5a; }
+    #work .work-header .work-header-title {
+      margin-top: -150px;
+      font-size: 2em;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: white; }
+    #work .work-header .work-header-subtext {
+      padding-bottom: 100px;
+      font-size: 2em;
+      font-family: "Times";
+      font-style: italic; }
+  #work #work-grid {
+    padding: 10px; }
+    #work #work-grid .grid-item {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-top: 2.35765%;
+      margin-bottom: 2.35765%;
+      height: 250px;
+      background: url(./planet_1x.png); }
+      #work #work-grid .grid-item:last-child {
+        margin-right: 0; }
+      #work #work-grid .grid-item .work-overlay {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        height: 100%;
+        width: 100%; }
+        #work #work-grid .grid-item .work-overlay a {
+          display: block;
+          padding-top: 10%; }
+
+/*# sourceMappingURL=slider.css.map */
