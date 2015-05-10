@@ -1,256 +1,88 @@
-html {
-  box-sizing: border-box; }
+/*
+Error: Undefined variable: "$work-color".
+        on line 220 of ./assets/style.scss
 
-*, *::after, *::before {
-  box-sizing: inherit; }
+215: 	text-align: center;
+216: 
+217: 	.work-header-bg {
+218: 		z-index: -1;
+219: 		font-size: 15em;
+220: 		color: lighten($work-color, 5)
+221: 	}
+222: 
+223: 	.work-header-title {
+224: 		margin-top: -150px;
+225: 		font-size: 2em;
 
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  height: 100%;
-  width: 100%; }
-
-body {
-  padding: 10px; }
-
-section {
-  padding: 8% 0 8% 0; }
-
-.container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  background-position: 50% 0;
-  background-color: white; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-#landing {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 90%;
-  width: 100%;
-  background: url("landing.png") center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
-  background-position: 50% 0;
-  color: white; }
-  #landing::after {
-    clear: both;
-    content: "";
-    display: table; }
-  #landing h1 {
-    margin: 0;
-    padding: 0; }
-
-.header-desktop {
-  height: 80px; }
-  .header-desktop .brand-desktop {
-    float: left; }
-  .header-desktop #nav-desktop {
-    float: right; }
-    .header-desktop #nav-desktop ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      padding-top: 15px; }
-      .header-desktop #nav-desktop ul li {
-        display: inline; }
-      .header-desktop #nav-desktop ul li a {
-        padding: 0 10px 0 10px;
-        text-transform: uppercase; }
-
-#story .story-copy {
-  font-size: 6em;
-  padding: 2em 1em 0 1em; }
-
-#gallery {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto; }
-  #gallery::after {
-    clear: both;
-    content: "";
-    display: table; }
-  #gallery .slide {
-    float: left;
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
-    #gallery .slide:last-child {
-      margin-right: 0; }
-    #gallery .slide .slide-media img {
-      height: 100%;
-      width: 100%; }
-    #gallery .slide .slide-info {
-      padding-top: 10%; }
-      #gallery .slide .slide-info .slide-title {
-        float: left;
-        font-size: 4em;
-        font-weight: 900; }
-        #gallery .slide .slide-info .slide-title em {
-          font-size: 0.3em;
-          font-weight: 400;
-          color: lightgray; }
-      #gallery .slide .slide-info .slide-source {
-        float: right;
-        padding-top: 3em;
-        height: 100%;
-        vertical-align: text-bottom; }
-  #gallery .slide-selector {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%; }
-    #gallery .slide-selector:last-child {
-      margin-right: 0; }
-    #gallery .slide-selector ul {
-      list-style: none;
-      padding: 0;
-      margin: 0; }
-
-.grid {
-  max-width: 96%;
-  margin-left: auto;
-  margin-right: auto; }
-  .grid::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.section-title {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  padding-left: 5%; }
-  .section-title:last-child {
-    margin-right: 0; }
-
-.row {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-right: 0; }
-  .row:last-child {
-    margin-right: 0; }
-  .row::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-#current-employer {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
-  margin-right: 0; }
-  #current-employer:last-child {
-    margin-right: 0; }
-
-#employment-details {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  #employment-details:last-child {
-    margin-right: 0; }
-
-.accordian-label {
-  padding: 2em;
-  text-transform: uppercase;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; }
-  .accordian-label span {
-    padding: 0;
-    margin: 0;
-    float: right;
-    font-size: 4em;
-    font-weight: 100;
-    line-height: 0; }
-
-.col-4-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .col-4-5:last-child {
-    margin-right: 0; }
-
-.col-1-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .col-1-3:last-child {
-    margin-right: 0; }
-
-.cell {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .cell:last-child {
-    margin-right: 0; }
-
-.work-header {
-  text-align: center; }
-  .work-header .work-header-bg {
-    z-index: -1;
-    font-size: 15em;
-    color: #5a5a5a; }
-  .work-header .work-header-title {
-    margin-top: -150px;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: white; }
-  .work-header .work-header-subtext {
-    padding-bottom: 100px;
-    font-size: 2em;
-    font-family: "Times";
-    font-style: italic; }
-
-#work {
-  background-color: #4d4d4d; }
-
-#work-grid .grid-item {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-top: 2.35765%;
-  margin-bottom: 2.35765%;
-  height: 250px;
-  background: url(./planet_1x.png); }
-  #work-grid .grid-item:last-child {
-    margin-right: 0; }
-  #work-grid .grid-item .work-overlay {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    height: 100%;
-    width: 100%; }
-    #work-grid .grid-item .work-overlay a {
-      display: block;
-      padding-top: 10%; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+./assets/style.scss:220
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:170:in `perform_arg'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:124:in `block in _perform'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:124:in `each'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:124:in `each_with_index'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:124:in `each'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:124:in `map'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:124:in `_perform'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/usr/lib/ruby/vendor_ruby/listen/listener.rb:150:in `call'
+/usr/lib/ruby/vendor_ruby/listen/listener.rb:150:in `block in _wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/listener.rb:145:in `loop'
+/usr/lib/ruby/vendor_ruby/listen/listener.rb:145:in `_wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/listener.rb:43:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$work-color\".\A         on line 220 of ./assets/style.scss\A \A 215: 	text-align: center;\A 216: \A 217: 	.work-header-bg {\A 218: 		z-index: -1;\A 219: 		font-size: 15em;\A 220: 		color: lighten($work-color, 5)\A 221: 	}\A 222: \A 223: 	.work-header-title {\A 224: 		margin-top: -150px;\A 225: 		font-size: 2em;"; }
