@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$work-color".
-        on line 220 of ./assets/style.scss
+        on line 220 of assets/style.scss
 
 215: 	text-align: center;
 216: 
@@ -15,7 +15,7 @@ Error: Undefined variable: "$work-color".
 225: 		font-size: 2em;
 
 Backtrace:
-./assets/style.scss:220
+assets/style.scss:220
 /var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/funcall.rb:170:in `perform_arg'
@@ -76,13 +76,14 @@ Backtrace:
 /var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
 /var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
 /var/lib/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/usr/lib/ruby/vendor_ruby/listen/listener.rb:150:in `call'
-/usr/lib/ruby/vendor_ruby/listen/listener.rb:150:in `block in _wait_for_changes'
-/usr/lib/ruby/vendor_ruby/listen/listener.rb:145:in `loop'
-/usr/lib/ruby/vendor_ruby/listen/listener.rb:145:in `_wait_for_changes'
-/usr/lib/ruby/vendor_ruby/listen/listener.rb:43:in `block in start'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `call'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/var/lib/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$work-color\".\A         on line 220 of ./assets/style.scss\A \A 215: 	text-align: center;\A 216: \A 217: 	.work-header-bg {\A 218: 		z-index: -1;\A 219: 		font-size: 15em;\A 220: 		color: lighten($work-color, 5)\A 221: 	}\A 222: \A 223: 	.work-header-title {\A 224: 		margin-top: -150px;\A 225: 		font-size: 2em;"; }
+  content: "Error: Undefined variable: \"$work-color\".\A         on line 220 of assets/style.scss\A \A 215: 	text-align: center;\A 216: \A 217: 	.work-header-bg {\A 218: 		z-index: -1;\A 219: 		font-size: 15em;\A 220: 		color: lighten($work-color, 5)\A 221: 	}\A 222: \A 223: 	.work-header-title {\A 224: 		margin-top: -150px;\A 225: 		font-size: 2em;"; }
