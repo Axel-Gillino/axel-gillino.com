@@ -10,8 +10,8 @@ html, body {
 body {
     padding: 10px 10px 0 10px;
     -webkit-font-smoothing: antialiased;
-    font-family: $futura-pt-medium;
     font-weight: 400;
+    font-size: 1.5em;
 }
 
 #landing {
@@ -52,7 +52,7 @@ body {
 	h1 {
 		margin: 0;
 		padding: 0;
-        font-family: $futura-pt-medium;
+        // font-family: $futura-pt-medium;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 6em;
@@ -61,7 +61,7 @@ body {
 	.lead {
         margin: 0;
         padding: 0;
-        font-family: $adobe-garamond-pro;
+        // font-family: $adobe-garamond-pro;
         font-style: italic;
         font-size: 2.5em;
         font-weight: 400;
@@ -155,6 +155,9 @@ header {
 
 .row.experience {
     margin-bottom: 0px;
+    .row-content > .dropdown {
+        display: none;
+    }
 
     .row-content > .dropdown > .dropdown-title {
         border-bottom: none;
@@ -353,7 +356,7 @@ header {
     	}
 
     	.work-header-title {
-    		margin-top: -150px;
+    		margin-top: -175px;
     		font-size: 2em;
     		text-transform: uppercase;
     		letter-spacing: 0.3em;
@@ -369,29 +372,36 @@ header {
     }
 
     #work-grid {
-        padding: 10px;
+        padding: 50px;
 
-        .grid-item{
-    		@include span-columns(4);
+        .grid-row {
 
-            margin-top: 2.35765%;
-    		margin-bottom: 2.35765%;
-    		height: 250px;
-    		background: url(./planet_1x.png);
+            margin: 2.1% 0 2.1% 0;
+    	    height: 250px;
 
-    		.work-overlay {
-    			display: none;
-    			background-color: rgba(0, 0, 0, 0.7);
-    			text-align: center;
+            .grid-item{
+    	    	@include span-columns(4);
 
-                @include height-width(100%, 100%);
+                //margin-top: 2.35765%;
+    	    	//margin-bottom: 2.35765%;
+    	    	height: 250px;
+    	    	background: url(./planet_1x.png);
+                border: 1px solid black;
 
-    			a {
-    				display: block;
-    				padding-top: 10%;
-    				// vertical-align: middle;
-    			}
-    		} //.grid-item
+    	    	.work-overlay {
+    	    		display: none;
+    	    		background-color: rgba(0, 0, 0, 0.7);
+    	    		text-align: center;
+
+                    @include height-width(100%, 100%);
+
+    	    		a {
+    	    			display: block;
+    	    			padding-top: 10%;
+    	    			// vertical-align: middle;
+    	    		}
+    	    	} //.grid-item
+    	    }
     	}
     }
 }

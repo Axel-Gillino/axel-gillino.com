@@ -10,8 +10,8 @@ html, body {
 body {
   padding: 10px 10px 0 10px;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Futura PT Medium', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 1.5em; }
 
 #landing {
   max-width: 100%;
@@ -52,7 +52,6 @@ body {
   #landing .lead {
     margin: 0;
     padding: 0;
-    font-family: 'Cardo', serif;
     font-style: italic;
     font-size: 2.5em;
     font-weight: 400; }
@@ -114,7 +113,7 @@ header #nav {
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
-    font-family: 'Adobe Garamond Pro', serif;
+    font-family: "Adobe Garamond Pro, serif";
     font-size: 1.2em;
     font-style: italic;
     text-align: right;
@@ -140,6 +139,8 @@ header #nav {
 
 .row.experience {
   margin-bottom: 0px; }
+  .row.experience .row-content > .dropdown {
+    display: none; }
   .row.experience .row-content > .dropdown > .dropdown-title {
     border-bottom: none; }
 
@@ -291,7 +292,7 @@ header #nav {
         padding: 15px 0; }
       .dropdown .dropdown-row .time-and-place .place {
         padding: 15px 0;
-        font-family: 'Cardo', serif;
+        font-family: "Adobe Garamond Pro, serif";
         font-size: 1.2em;
         font-style: italic; }
     .dropdown .dropdown-row .position-info {
@@ -322,7 +323,7 @@ header #nav {
       font-size: 15em;
       color: #595959; }
     #work .work-header .work-header-title {
-      margin-top: -150px;
+      margin-top: -175px;
       font-size: 2em;
       text-transform: uppercase;
       letter-spacing: 0.3em;
@@ -330,29 +331,31 @@ header #nav {
     #work .work-header .work-header-subtext {
       padding-bottom: 100px;
       font-size: 2em;
-      font-family: "Adobe Garamond Pro";
+      font-family: "Adobe Garamond Pro, serif";
       font-style: italic; }
   #work #work-grid {
-    padding: 10px; }
-    #work #work-grid .grid-item {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-top: 2.35765%;
-      margin-bottom: 2.35765%;
-      height: 250px;
-      background: url(./planet_1x.png); }
-      #work #work-grid .grid-item:last-child {
-        margin-right: 0; }
-      #work #work-grid .grid-item .work-overlay {
-        display: none;
-        background-color: rgba(0, 0, 0, 0.7);
-        text-align: center;
-        height: 100%;
-        width: 100%; }
-        #work #work-grid .grid-item .work-overlay a {
-          display: block;
-          padding-top: 10%; }
+    padding: 50px; }
+    #work #work-grid .grid-row {
+      margin: 2.1% 0 2.1% 0;
+      height: 250px; }
+      #work #work-grid .grid-row .grid-item {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        height: 250px;
+        background: url(./planet_1x.png);
+        border: 1px solid black; }
+        #work #work-grid .grid-row .grid-item:last-child {
+          margin-right: 0; }
+        #work #work-grid .grid-row .grid-item .work-overlay {
+          display: none;
+          background-color: rgba(0, 0, 0, 0.7);
+          text-align: center;
+          height: 100%;
+          width: 100%; }
+          #work #work-grid .grid-row .grid-item .work-overlay a {
+            display: block;
+            padding-top: 10%; }
 
 /*# sourceMappingURL=slider.css.map */
