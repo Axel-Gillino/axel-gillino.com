@@ -25,7 +25,9 @@
         var $content = $(this).siblings('.dropdown-content')
         $content.is(':visible')
             ? $content.slideUp()
-            : $content.slideDown()
+            : $content.slideDown(100, function() {
+                $content.trigger('slid_up')
+            })
     })
 
     $('.dropdown.experience > .dropdown-title').click(function(e) {
