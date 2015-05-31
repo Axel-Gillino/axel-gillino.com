@@ -136,6 +136,7 @@ header {
         font-style: italic;
         text-align: right;
         color: $heading-color;
+        font-size: 1.5em;
     }
 
     .row-title.education {
@@ -145,6 +146,7 @@ header {
     .row-content {
         @include shift(1);
         @include span-columns(8);
+        font-size: 1.5em;
     }
 }
 
@@ -168,6 +170,7 @@ header {
 }
 
 .row.education {
+    display: none;
     margin-top: 0px;
 }
 
@@ -230,11 +233,23 @@ header {
     .slide-selector {
         //@include span-columns(1);
         float: left;
-        padding-top: 8%;
-
+        padding-top: 5%;
+        padding-left: 2%;
         ul {
 			@include plain-ul();
-		}
+
+            li {
+                padding: 5px;
+                color: gray;
+                font-family: "Helvetica";
+                font-size: 1.5em;
+                font-weight: 100;
+            }
+
+            li:hover {
+                color: black;
+            }
+        }
     }
 }
 
@@ -279,6 +294,10 @@ header {
 
     #job-description {
          @include span-columns(12);
+
+         p {
+             width: 80%;
+         }
     }
 }
 

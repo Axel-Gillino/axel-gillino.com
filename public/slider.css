@@ -120,7 +120,8 @@ header #nav {
     font-size: 1.2em;
     font-style: italic;
     text-align: right;
-    color: #b0976d; }
+    color: #b0976d;
+    font-size: 1.5em; }
     .row .row-title:last-child {
       margin-right: 0; }
   .row .row-title.education {
@@ -130,7 +131,8 @@ header #nav {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%; }
+    width: 65.88078%;
+    font-size: 1.5em; }
     .row .row-content:last-child {
       margin-right: 0; }
 
@@ -148,6 +150,7 @@ header #nav {
     border-bottom: none; }
 
 .row.education {
+  display: none;
   margin-top: 0px; }
 
 .ul-col {
@@ -202,11 +205,20 @@ header #nav {
         vertical-align: text-bottom; }
   #gallery .slide-selector {
     float: left;
-    padding-top: 8%; }
+    padding-top: 5%;
+    padding-left: 2%; }
     #gallery .slide-selector ul {
       list-style: none;
       padding: 0;
       margin: 0; }
+      #gallery .slide-selector ul li {
+        padding: 5px;
+        color: gray;
+        font-family: "Helvetica";
+        font-size: 1.5em;
+        font-weight: 100; }
+      #gallery .slide-selector ul li:hover {
+        color: black; }
 
 .sub-title {
   margin: 0;
@@ -251,6 +263,8 @@ header #nav {
     width: 100%; }
     #current-position #job-description:last-child {
       margin-right: 0; }
+    #current-position #job-description p {
+      width: 80%; }
 
 .dropdown {
   float: left;
