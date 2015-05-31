@@ -9,6 +9,8 @@ html, body {
 
 body {
     padding: 10px 10px 0 10px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
 }
 
 #landing {
@@ -24,12 +26,49 @@ body {
 
 	color: white;
 
+    .gradient {
+        @include fill-parent();
+        background: rgba(0,0,0,0.5);
+        -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        -ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        height: 100%;
+//        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)) ;
+    }
+
+    .table {
+        display: table;
+        border-collapse: collapse;
+    }
+
+    .cell {
+        display: table-cell;
+        border: 0;
+    }
+
+    .center {
+        vertical-align: middle;
+        text-align: center;
+    }
+
 	h1 {
 		margin: 0;
 		padding: 0;
+        // font-family: $futura-pt-medium;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 7em;
 	}
 
-	.lead {}
+	.lead {
+        margin: 0;
+        padding: 0;
+        // font-family: $adobe-garamond-pro;
+        font-style: italic;
+        font-size: 3em;
+        font-weight: 400;
+    }
 }
 
 .container {
@@ -40,12 +79,14 @@ body {
     background-color: white;
 }
 
+
 header {
     #brand {
         float: left;
+
         img {
-            margin: 15px;
-            height: 80px;
+            margin: 30px 0 0 30px;
+            height: 60px;
         }
     }
 
@@ -77,36 +118,88 @@ header {
 	clear: both;
 }
 
-.row-title {
-    @include span-columns(3);
-    text-align: right;
+#story {
+	padding: 0em 1em 1em 1em;
+    font-size: 5em;
+    font-weight: 300;
 }
 
-.row-content {
-    @include span-columns(9);
+.row {
+    @include span-columns(12);
+    margin: 30px 0;
+
+    .row-title {
+        @include span-columns(3);
+
+        font-family: $adobe-garamond-pro;
+        font-size: 1.2em;
+        font-style: italic;
+        text-align: right;
+        color: $heading-color;
+    }
+
+    .row-title.education {
+        padding-top: 111px;
+    }
+
+    .row-content {
+        @include shift(1);
+        @include span-columns(8);
+    }
+}
+
+.first.row {
+    margin-top: 0;
+}
+
+.last.row {
+     margin-bottom: 0;
+}
+
+.row.experience {
+    margin-bottom: 0px;
+    .row-content > .dropdown {
+        display: none;
+    }
+
+    .row-content > .dropdown > .dropdown-title {
+        border-bottom: none;
+    }
+}
+
+.row.education {
+    margin-top: 0px;
 }
 
 .ul-col {
     @include span-columns(4);
+
     margin: 0;
     padding: 0;
     list-style-type: none;
 
     li {
+        padding: 0 10px 20px 10px;
         text-decoration: none;
     }
 }
 
 #gallery {
     @include span-columns(12);
+    @include pad(0 0 0 0);
+
+    padding-top: 1em;
+    padding-bottom: 100px;
 
     .slide {
-        @include shift(1);
-        @include span-columns(8);
+        @include shift(3);
+        @include span-columns(6);
+
+        margin-left: 23.58941%;
 
         .slide-media {
 			img {
-				width: 100%;
+				width: 105%;
 			}
 		}
 
@@ -115,6 +208,7 @@ header {
 
 			.slide-title {
 				float: left;
+                margin-left: -6px;
 				font-size: 4em;
 				font-weight: 900;
 
@@ -134,40 +228,57 @@ header {
     }
 
     .slide-selector {
-        @include span-columns(1);
+        //@include span-columns(1);
+        float: left;
+        padding-top: 8%;
+
         ul {
 			@include plain-ul();
 		}
     }
 }
 
+.sub-title {
+    margin: 0;
+    padding: 0 0 10px 0;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $subtle;
+}
+
 #current-position {
     @include span-columns(12);
 
-    h6 {
-        margin: 0;
-        padding: 0;
-    }
-
     #current-employer {
-        @include span-columns(2);
+        @include span-columns(1);
+
+        padding-bottom: 15px;
 
         #employer-logo {
-
             img {
-                width: 100%;
+                width: 64px;
             }
         }
-
-        #employer-name {}
     }
 
     #employment-details {
-        @include span-columns(10);
+        @include span-columns(11);
 
-        #current-role {}
+        margin-left: 4%;
+        width: 80%;
+
+        #current-role {
+            strong {
+                font-size: 1em;
+                font-size: 1.2em;
+            }
+        }
 
         #employer-info {}
+    }
+
+    #job-description {
+         @include span-columns(12);
     }
 }
 
@@ -176,27 +287,67 @@ header {
 
     background-color: white;
 
-    .dropdown-title {}
+    .dropdown-title {
+        width: 80%;
+	    padding: 30px;
+	    text-transform: uppercase;
+	    border-top: 1px solid black;
+	    border-bottom: 1px solid black;
+        color: $heading-color;
+        cursor: pointer;
+
+        .close {
+	    	padding: 10px 0 0 0;
+	    	margin: 0;
+	    	float: right;
+	    	font-size: 3.6em;
+	    	font-weight: 500;
+	    	line-height: 0;
+            color: black;
+	    }
+    }
 
     .dropdown-row {
         @include span-columns(12);
 
         .time-and-place {
             @include span-columns(3);
+
+            padding: $pos-info-padding;
+
+            .time {
+                padding: $pos-info-cell-padding;
+            }
+
+            .place {
+                padding: $pos-info-cell-padding;
+                font-family: $adobe-garamond-pro;
+                font-size: 1.2em;
+                font-style: italic;
+            }
         }
 
         .position-info {
             @include span-columns(9);
+
+            padding: $pos-info-padding;
+
+            .position-title {
+                padding: $pos-info-cell-padding;
+            }
+
+            .company-info {
+                padding: $pos-info-cell-padding;
+            }
         }
     }
-
-}
+}//.dropdown
 
 
 #work {
     @include span-columns(12);
 
-	background-color: $work-color;
+	background-color: $work-background-color;
 
     .work-header {
     	text-align: center;
@@ -204,11 +355,11 @@ header {
     	.work-header-bg {
     		z-index: -1;
     		font-size: 15em;
-    		color: lighten($work-color, 5)
+    		color: lighten($work-background-color, 5)
     	}
 
     	.work-header-title {
-    		margin-top: -150px;
+    		margin-top: -175px;
     		font-size: 2em;
     		text-transform: uppercase;
     		letter-spacing: 0.3em;
@@ -218,36 +369,42 @@ header {
     	.work-header-subtext {
     		padding-bottom: 100px;
     		font-size: 2em;
-    		font-family: "Times";
+    		font-family: $adobe-garamond-pro;
     		font-style: italic;
     	}
     }
 
     #work-grid {
-        padding: 10px;
+        padding: 50px;
 
-        .grid-item{
-    		@include span-columns(4);
+        .grid-row {
 
-            margin-top: 2.35765%;
-    		margin-bottom: 2.35765%;
-    		height: 250px;
-    		background: url(./planet_1x.png);
+            margin: 2.1% 0 2.1% 0;
+    	    height: 250px;
 
-    		.work-overlay {
-    			display: none;
-    			background-color: rgba(0, 0, 0, 0.7);
-    			text-align: center;
+            .grid-item{
+    	    	@include span-columns(4);
 
-                @include height-width(100%, 100%);
+                //margin-top: 2.35765%;
+    	    	//margin-bottom: 2.35765%;
+    	    	height: 250px;
+    	    	background: url(./planet_1x.png);
+                border: 1px solid black;
 
-    			a {
-    				display: block;
-    				padding-top: 10%;
-    				// vertical-align: middle;
-    			}
-    		} //.grid-item
+    	    	.work-overlay {
+    	    		display: none;
+    	    		background-color: rgba(0, 0, 0, 0.7);
+    	    		text-align: center;
+
+                    @include height-width(100%, 100%);
+
+    	    		a {
+    	    			display: block;
+    	    			padding-top: 10%;
+    	    			// vertical-align: middle;
+    	    		}
+    	    	} //.grid-item
+    	    }
     	}
     }
 }
-
