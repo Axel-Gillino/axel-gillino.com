@@ -4,18 +4,11 @@
     <link rel="stylesheet" href="./public/slider.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Cardo:200,400,400italic,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <script src="//use.typekit.net/kte4agz.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 <body class="tk-futura-pt">
-<div id="landing">
-    <div class="gradient table">
-        <span class="cell center">
-            <h1 class="tk-futura-pt">Axel Gillino</h1>
-            <p class="lead tk-adobe-garamond-pro">Designer &amp; Interactive Art Director</p>
-        </span>
-    </div>
-</div>
 
 <div class="container">
 
@@ -26,60 +19,77 @@
 
         <nav id="nav">
             <ul>
-                <li><a href="#">Dribble</a></li>
-                <li><a href="#">Behance</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Let's Talk</a></li>
+                <li><a href="#" id="trigger-overlay">menu</a></li>
             </ul>
         </nav>
         <div class="clearfix"></div>
     </header>
 
+    <h1 class="tk-futura-pt">
+        Axel Gillino
+        <p class="tk-adobe-garamond-pro">Designer &amp; Interactive Art Director</p>
+    </h1>
 
     <div class="first row tk-futura-pt">
-        <p id="story">
-            Originally from France &amp; currently living in Montreal, multimedia engineering and design graduate, passionate about ideas, experience and communication through good design.
+        <img class="avatar desktop" src="/public/axel-avatar.png">
+
+        <p class="lead">
+            Axel Gillino is a French multidisciplinary designer, multimedia engineering and design graduate with over 6 years in the industry, passionate about ideas, experience and communication through good design.
+        </p>
+
+
+        <img class="avatar mobile" src="/public/axel-avatar.png">
+
+        <p>
+            His passion for flawlessly executed and engaging design is bolstered by his obsession with pixel perfection and usability. He have a hunger for the latest innovations, and continuously use what he learn to push the boundaries of technology and optimize user experience.
+        </p>
+
+        <p>
+            Not only he use his multi-faceted design skills to execute beautiful and visionary work that solves problems, he also create new business opportunities and cultural innovation. He have a thirst for inspiration that simply cannot be quenched.
         </p>
     </div><!-- /.row -->
 
 
     <div class="row">
         <div id="gallery">
+            <div class="slides-heading">
+                <p>Projects</p>
+            </div>
+
         <div class="slides">
             <span id="slide-1" class="slide">
-                <div class="slide-media">
+                <div class="slide-media" style="background-image: url('/public/bookmycoach.png');">
                 </div>
 
                 <div class="slide-info">
-                    <span class="slide-title">Barpass <span class="slide-date">2014</span></span>
+                    <span class="slide-title">BookmyCoach<span class="slide-date">Product Designer</span></span>
                 </div>
             </span><!-- /.slide -->
 
             <span id="slide-2" class="slide">
-                <div class="slide-media">
+                <div class="slide-media" style="background-image: url('/public/barpass.png');">
                 </div>
 
                 <div class="slide-info">
-                    <span class="slide-title">Barpass <span class="slide-date">2014</span></span>
+                    <span class="slide-title">Barpass <span class="slide-date">CD &amp; Founder</span></span>
                 </div>
             </span><!-- /.slide -->
 
             <span id="slide-3" class="slide">
-                <div class="slide-media">
+                <div class="slide-media" style="background-image: url('/public/merchlar.png');">
                 </div>
 
                 <div class="slide-info">
-                    <span class="slide-title">Barpass <span class="slide-date">2014</span></span>
+                    <span class="slide-title">Merchlar <span class="slide-date">Designer</span></span>
                 </div>
             </span><!-- /.slide -->
 
             <span id="slide-4" class="slide">
-                <div class="slide-media">
+                <div class="slide-media" style="background-image: url('/public/cbre.png');">
                 </div>
 
                 <div class="slide-info">
-                    <span class="slide-title">Barpass <span class="slide-date">2014</span></span>
+                    <span class="slide-title">CBRE <span class="slide-date">Designer</span></span>
                 </div>
             </span><!-- /.slide -->
 
@@ -107,6 +117,8 @@
                 <li>Branding &amp; Identity</li>
                 <li>Info Architecture</li>
                 <li>Augmented Reality</li>
+                <li class="mobile">Visual Design</li>
+                <li class="mobile">Design Systems</li>
             </ul>
 
             <ul class="ul-col">
@@ -114,9 +126,11 @@
                 <li>Web &amp; Mobile Design</li>
                 <li>Digital Experiences</li>
                 <li>Interaction Design</li>
+                <li class="mobile">Speaking</li>
+                <li class="mobile">Consulting</li>
             </ul>
 
-            <ul class="ul-col">
+            <ul class="ul-col desktop">
                 <li>Visual Design</li>
                 <li>Design Systems</li>
                 <li>Speaking</li>
@@ -134,14 +148,16 @@
             <ul class="ul-col">
                 <li>Awwwards</li>
                 <li>Ingenious Awards</li>
+                <li class="mobile">FWA Awards</li>
             </ul>
 
             <ul class="ul-col">
                 <li>FWA Mobile Awards</li>
                 <li>Boomerang Awards</li>
+                <li class="mobile">ITAC Awards</li>
             </ul>
 
-            <ul class="ul-col">
+            <ul class="ul-col desktop">
                 <li>FWA Awards</li>
                 <li>ITAC Awards</li>
             </ul>
@@ -150,12 +166,11 @@
 
     <div class="row experience">
         <div class="row-title tk-adobe-garamond-pro">
-            Experience
+            Currently
         </div>
 
         <div class="row-content">
             <div id="current-position">
-                <h6 class="sub-title">Currently</h6>
                 <div id="current-employer">
                     <div id="employer-logo">
                         <img src="public/made-media.svg">
@@ -164,237 +179,14 @@
 
                 <div id="employment-details">
                     <div id="current-role">
-                        <strong>Lead Product Designer &amp; Interactive Art Director</strong>
+                        <strong>Lead Product Designer</strong>
                     </div>
 
                     <div id="employer-info">
-                        Jul 2014 . Montreal, Canada . Made Media . getmade.co
+                        Sep 2015 . <a href="http://breather.com">Breather</a> . Montreal, Canada
                     </div>
-                </div>
-
-                <div id="job-description">
-                    <h6 class="sub-title">Challenge</h6>
-                    <p>Rethinking the face-to-face salespeople &amp; fundraisers solutions and the systems that manage them.</p>
                 </div>
             </div>
-            <div class="dropdown experience">
-
-                <div class="dropdown-title">
-                    See more of my work history... <span class="close">&times;</span>
-                </div>
-
-                <div class="dropdown-content">
-
-                    <!-- BOOKMYCOACH -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                Mar . Jul 2014
-                            </div>
-
-                            <div class="place">
-                                Berlin, Germany
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                 Product Design Consultant
-                            </div>
-
-                            <div class="company-info">
-                                BookMyCoach . bookmycoach.de
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                    <!-- BARPASS -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                Apr 2013 . Jun 2014
-                            </div>
-
-                            <div class="place">
-                                Montreal, Canada
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                 Co-Founder &amp; Product Designer
-                            </div>
-
-                            <div class="company-info">
-                                 Bar Pass . barpass.co
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                    <!-- MERCHLAR -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                Jul 2012 . Mar 2014
-                            </div>
-
-                            <div class="place">
-                                Montreal, Canada
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                 Lead UX/UI Designer &amp; Interactive Art Director
-                            </div>
-
-                            <div class="company-info">
-                                 Merchlar . merchlar.com
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                    <!-- W&CIE -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                Jan . May 2012
-                            </div>
-
-                            <div class="place">
-                                Paris, France
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                Junior Interacive Art Director
-                            </div>
-
-                            <div class="company-info">
-                                W&amp;Cie . wcie.fr
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                    <!-- OSTRAL -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                Sep 2010 . Apr 2011
-                            </div>
-
-                            <div class="place">
-                                Sydney, Australia
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                Frontend Developer
-                            </div>
-
-                            <div class="company-info">
-                                Ostral . ostral.com.au
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-                </div><!-- /.dropdown-content -->
-
-            </div>
-        </div>
-    </div><!-- /.row -->
-
-
-
-    <div class="row education">
-        <div class="row-title education">
-            <span class="js-toggle">Education</span>
-        </div>
-
-        <div class="row-content">
-            <div class="dropdown">
-
-                <div class="dropdown-title education">
-                    See my education... <span class="close">&plus;</span>
-                </div>
-
-                <div class="dropdown-content education">
-
-                    <!-- U OF M -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                2012 . 2013
-                            </div>
-
-                            <div class="place">
-                                Montreal, Canada
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                Masters Degree in Media Engineering
-                            </div>
-
-                            <div class="company-info">
-                                University of Montreal &amp; Institut Ingemedia
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                    <!-- INGEMEDIA -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                2011 . 2012
-                            </div>
-
-                            <div class="place">
-                                Toulon, France
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                                Bachelors Degree in Multimedia Design
-                            </div>
-
-                            <div class="company-info">
-                                Institut Ingemedia, University of Toulon
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                    <!-- TOULON -->
-                    <div class="dropdown-row">
-                        <div class="time-and-place">
-                            <div class="time">
-                                2008 . 2011
-                            </div>
-
-                            <div class="place">
-                                Dijon, France
-                            </div>
-                        </div><!-- /.time-and-place -->
-
-                        <div class="position-info">
-                            <div class="position-title">
-                               Technical Degree in Computing &amp; Communications
-                            </div>
-
-                            <div class="company-info">
-                                Institut Ingemedia, University of Toulon
-                            </div>
-                        </div><!-- /.position-info -->
-                    </div>
-
-                </div><!-- /.dropdown-content -->
-
-            </div>
-
-
         </div>
     </div><!-- /.row -->
 
@@ -411,46 +203,26 @@
                 </div>
 
                 <div class="work-header-subtext tk-adobe-garamond-pro">
-                    dribbble
+                    <img src="/public/dribbble.svg">
                 </div>
             </div><!-- /#work-header -->
 
             <div id="work-grid" class="grid">
 
                 <div class="grid-row">
-                    <div class="grid-item">
+                    <div class="grid-item" style="background: url(/public/work/barpass.png);">
                         <div class="work-overlay">
                             <a href="">one</a>
                         </div>
                     </div><!-- /.grid-item -->
 
-                    <div class="grid-item">
+                    <div class="grid-item" style="background: url(/public/work/bookmy-coach.png);">
                         <div class="work-overlay">
                             <a href="">one</a>
                         </div>
                     </div><!-- /.grid-item -->
 
-                    <div class="grid-item">
-                        <div class="work-overlay">
-                            <a href="">one</a>
-                        </div>
-                    </div><!-- /.grid-item -->
-                </div><!-- /.grid-row -->
-
-                <div class="grid-row">
-                    <div class="grid-item">
-                        <div class="work-overlay">
-                            <a href="">one</a>
-                        </div>
-                    </div><!-- /.grid-item -->
-
-                    <div class="grid-item">
-                        <div class="work-overlay">
-                            <a href="">one</a>
-                        </div>
-                    </div><!-- /.grid-item -->
-
-                    <div class="grid-item">
+                    <div class="grid-item" style="background: url(/public/work/bookmy-coach-case.png);">
                         <div class="work-overlay">
                             <a href="">one</a>
                         </div>
@@ -458,19 +230,39 @@
                 </div><!-- /.grid-row -->
 
                 <div class="grid-row">
-                    <div class="grid-item">
+                    <div class="grid-item" style="background: url(/public/work/deer.png);">
                         <div class="work-overlay">
                             <a href="">one</a>
                         </div>
                     </div><!-- /.grid-item -->
 
-                    <div class="grid-item">
+                    <div class="grid-item" style="background: url(/public/work/merchlar.png);">
                         <div class="work-overlay">
                             <a href="">one</a>
                         </div>
                     </div><!-- /.grid-item -->
 
-                    <div class="grid-item">
+                    <div class="grid-item" style="background: url(/public/work/merchlar-mobile.png);">
+                        <div class="work-overlay">
+                            <a href="">one</a>
+                        </div>
+                    </div><!-- /.grid-item -->
+                </div><!-- /.grid-row -->
+
+                <div class="grid-row">
+                    <div class="grid-item" style="background: url(/public/work/planet.png);">
+                        <div class="work-overlay">
+                            <a href="">one</a>
+                        </div>
+                    </div><!-- /.grid-item -->
+
+                    <div class="grid-item" style="background: url(/public/work/cbre.png);">
+                        <div class="work-overlay">
+                            <a href="">one</a>
+                        </div>
+                    </div><!-- /.grid-item -->
+
+                    <div class="grid-item" style="background: url(/public/work/helmet.png);">
                         <div class="work-overlay">
                             <a href="">one</a>
                         </div>
@@ -483,7 +275,41 @@
     </div><!-- /.row -->
 </div><!-- /#container -->
 
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+            <li><a href="#">Dribble</a></li>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Let's Talk</a></li>
+        </ul>
+    </nav>
+</div>
+
 <script type="text/javascript" src="assets/vendors/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="public/slider.js"></script>
+<script type="text/javascript">
+(function() {
+    var triggerBttn = $('#trigger-overlay'),
+        overlay     = $('.overlay'),
+        closeBttn   = $('.overlay-close');
+
+    function toggleOverlay() {
+        if( overlay.hasClass('open')) {
+            overlay.removeClass('open');
+            overlay.addClass('close');
+        } else {
+            overlay.addClass('open');
+            overlay.removeClass('close');
+        }
+    }
+
+    triggerBttn.on( 'click', toggleOverlay );
+    closeBttn.on( 'click', toggleOverlay );
+})();
+</script>
+
 </body>
 </html>
