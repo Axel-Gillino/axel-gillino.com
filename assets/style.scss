@@ -89,27 +89,37 @@ h1 {
 
 .first{
     padding: 4em;
-    max-width: 1600px;
+    max-width: 1240px;
 
     .avatar {
+        background-color: green;
         float: left;
-        max-width: 650px;
+        max-width: 550px;
+        max-width: 670px;
         margin-right: 2em;
         margin-bottom: 4em;
     }
 
     p {
-        text-align: left;
-        line-height: 1.5em;
-        font-size: 1.3em;
-        font-weight: 300;
+        font-family: "futura-pt";
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.6em;
+        font-size: 1.5em;
+        letter-spacing: 0.5px;
+        text-align: justify;
     }
 
     .lead {
         margin-top: 0;
-    	padding: 0em 1em 0em 0em;
-        font-size: 2em;
-        font-weight: 300;
+        margin-bottom: 1.6em;
+        font-family: "adobe-garamond-pro";
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.5em;
+        font-size: 1.8em;
+        letter-spacing: normal;
+        text-align: justify;
     }
 }
 .row {
