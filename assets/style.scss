@@ -92,13 +92,12 @@ h1 {
     max-width: 1240px;
 
     .avatar {
-        background-color: green;
+        background-color: white;
         float: left;
         max-width: 550px;
         max-width: 670px;
         margin-right: 2em;
         margin-bottom: 4em;
-        background-color: #fff;
         border-radius: 4px;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
     }
@@ -132,9 +131,16 @@ h1 {
     .row-title {
         @include span-columns(3);
         width: 18%;
+        padding-left: 9.5em;
         //font-family: $futura-pt-medium;
-        text-align: right;
+        text-align: left;
         color: $heading-color;
+        text-transform: uppercase;
+				font-size: 0.85em;
+        font-family: "futura-pt",sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.15em;
     }
 
     .row-content {
@@ -184,7 +190,6 @@ h1 {
 #gallery {
     //@include span-columns(12);
 
-    padding-top: 1em;
     margin-bottom: 4em;
     // height: auto;
     width: 100%;
@@ -192,7 +197,16 @@ h1 {
     white-space: nowrap;
 
     .slides-heading {
-        border-top: 1px solid #d2d2d2;
+      p {
+        text-align: left;
+        color: $heading-color;
+        text-transform: uppercase;
+				font-size: 0.6em;
+        font-family: "futura-pt",sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+      }
     }
 
     .slides {
@@ -208,32 +222,54 @@ h1 {
         margin-right: 1%;
         width: 498px;
         height: auto;
-        // border-bottom: 1px solid #d2d2d2;
         border-radius: 4px;
         background-color: #fff;
+        cursor: pointer;
+
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transition: box-shadow 0.3s ease;
+        -moz-transition: box-shadow 0.3s ease;
+        -ms-transition: box-shadow 0.3s ease;
+        -o-transition: box-shadow 0.3s ease;
+        transition: box-shadow 0.3s ease;
+
+        }
 
         .slide-media {
             background-size: cover;
             border-radius: 4px 4px 0 0;
             height: 348px;
-		}
+		    }
 
-		.slide-info {
-			.slide-title {
+        .slide:hover {
+
+          -webkit-transition: box-shadow 0.3s ease;
+          -moz-transition: box-shadow 0.3s ease;
+          -ms-transition: box-shadow 0.3s ease;
+          -o-transition: box-shadow 0.3s ease;
+          transition: box-shadow 0.3s ease;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
+
+          }
+
+	    .slide-title {
 				float: left;
-                padding: 0.7em;
-                width: 100%;
+        padding: 0.7em;
+        width: 100%;
         font-family: "futura-pt",sans-serif;
+        color: black;
+        text-decoration: none;
         font-style: normal;
         font-weight: 700;
         font-size: 1.4em;
-            }
+      }
 
-			.slide-date {
-                float: right;
-                padding: 0.55em 0 0.55em 0;
-                text-align: right;
+			.slide-position {
+        float: right;
+        padding: 0.55em 0 0.55em 0;
+        text-align: right;
         text-transform: uppercase;
 				font-size: 0.6em;
         font-family: "futura-pt",sans-serif;
@@ -242,11 +278,13 @@ h1 {
         letter-spacing: 0.15em;
 				color: $heading-color;
 			}
-		}
-    }
 
     #slide-1 {
         margin-left: 2em;
+    }
+
+    #slide-8 {
+        margin-right: 2em;
     }
 }
 
@@ -301,10 +339,11 @@ h1 {
 #work {
     @include span-columns(12);
 
-	background-color: $work-background-color;
+	  background-color: $work-background-color;
 
     .work-header {
     	text-align: center;
+      margin-top: 30px;
 
     	.work-header-bg {
     		z-index: -1;
@@ -339,34 +378,64 @@ h1 {
           margin: 2.1% 0 2% 0;
     	    height: 300px;
 
-          .grid-item{
-    	    @include span-columns(4);
+
+          .grid-item {
+    	      @include span-columns(4);
 
             //margin-top: 2.35765%;
     	    	//margin-bottom: 2.35765%;
     	    	height: 300px;
             background-size: cover;
             border-radius: 4px;
-            background-color: #fff;
+
+            display: block;
+
+            background-color: white;
+            // border: 1px solid black;
+            cursor: pointer;
+
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
-            border: 1px solid black;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition: box-shadow 0.3s ease;
+            -moz-transition: box-shadow 0.3s ease;
+            -ms-transition: box-shadow 0.3s ease;
+            -o-transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease;
+
+            }
 
     	    	.work-overlay {
     	    		display: none;
-    	    		background-color: rgba(0, 0, 0, 0.7);
+    	    		background-color: rgba(0, 0, 0, 0.8);
     	    		text-align: center;
+              border-radius: 4px;
 
-                    @include height-width(100%, 100%);
+              -webkit-transition: box-shadow 0.3s ease;
+              -moz-transition: box-shadow 0.3s ease;
+              -ms-transition: box-shadow 0.3s ease;
+              -o-transition: box-shadow 0.3s ease;
+              transition: box-shadow 0.3s ease;
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
 
-    	    		a {
-    	    			display: block;
-    	    			padding-top: 35%;
-    	    			// vertical-align: middle;
-    	    		}
-    	    	} //.grid-item
-    	    }
-    	}
-    }
+              @include height-width(100%, 100%);
+
+    	    		   a {
+    	    			    display: block;
+    	    			    padding-top: 34%;
+                    color: white;
+                    text-decoration: none;
+    	    			    vertical-align: middle;
+                    font-family: "futura-pt";
+                    font-weight: 400;
+                    font-style: normal;
+                    line-height: 1.6em;
+                    font-size: 1.5em;
+                    letter-spacing: 0.5px;
+    	    		   }
+              }
+    	    } //.grid-item
+      }
 }
 
 /* Overlay style */
