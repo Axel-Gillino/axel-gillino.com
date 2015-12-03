@@ -15,8 +15,6 @@ body {
 
 .container {
     @include outer-container(100%);
-	  @include parallax();
-
     background-color: white;
 }
 
@@ -36,13 +34,14 @@ header {
 
 		ul {
 			@include inline-nav();
+            z-index: 999;
+            position: fixed;
+            top: 40px;
+            right: 30px;
 
-      position: fixed;
-      top: 40px;
-      right: 30px;
-      img{
-        width: 24px;
-      }
+          img {
+            width: 24px;
+          }
 
 			li {
 				a {
@@ -338,8 +337,8 @@ h1 {
 
 #work {
     @include span-columns(12);
-
-	  background-color: $work-background-color;
+    padding: 0 3%;
+	background-color: $work-background-color;
 
     .work-header {
     	text-align: center;
@@ -369,74 +368,83 @@ h1 {
     		padding-bottom: 100px;
     	}
     }
+} //#work
 
-    #work-grid {
-        padding: 50px;
+#work-grid {
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
 
-        .grid-row {
+.grid-row {
+    &:after {
+        content: " ";
+        padding: 10px;
+    }
 
-          margin: 2.1% 0 2% 0;
-    	    height: 300px;
-
-
-          .grid-item {
-    	      @include span-columns(4);
-
-            //margin-top: 2.35765%;
-    	    	//margin-bottom: 2.35765%;
-    	    	height: 300px;
-            background-size: cover;
+    .grid-item {
+        img {
+            width: 100%;
             border-radius: 4px;
+        }
 
+        background-position: center;
+        // height: 100%;
+
+        background-size: cover;
+        border-radius: 4px;
+        display: block;
+        background-color: white;
+        cursor: pointer;
+
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transition: box-shadow 0.3s ease;
+        -moz-transition: box-shadow 0.3s ease;
+        -ms-transition: box-shadow 0.3s ease;
+        -o-transition: box-shadow 0.3s ease;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .work-overlay {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+
+        border-radius: 4px;
+
+        -webkit-transition: box-shadow 0.3s ease;
+        -moz-transition: box-shadow 0.3s ease;
+        -ms-transition: box-shadow 0.3s ease;
+        -o-transition: box-shadow 0.3s ease;
+        transition: box-shadow 0.3s ease;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
+
+        @include width-height (100%, 100%);
+
+        a {
             display: block;
+            padding-top: 34%;
+            color: white;
+            text-decoration: none;
+            vertical-align: middle;
+            font-family: "futura-pt";
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.6em;
+            font-size: 1.4em;
+            letter-spacing: 0.5px;
+        } //a
 
-            background-color: white;
-            // border: 1px solid black;
-            cursor: pointer;
+    } //.work-overlay
 
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-transition: box-shadow 0.3s ease;
-            -moz-transition: box-shadow 0.3s ease;
-            -ms-transition: box-shadow 0.3s ease;
-            -o-transition: box-shadow 0.3s ease;
-            transition: box-shadow 0.3s ease;
-
-            }
-
-    	    	.work-overlay {
-    	    		display: none;
-    	    		background-color: rgba(0, 0, 0, 0.8);
-    	    		text-align: center;
-              border-radius: 4px;
-
-              -webkit-transition: box-shadow 0.3s ease;
-              -moz-transition: box-shadow 0.3s ease;
-              -ms-transition: box-shadow 0.3s ease;
-              -o-transition: box-shadow 0.3s ease;
-              transition: box-shadow 0.3s ease;
-              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
-
-              @include height-width(100%, 100%);
-
-    	    		   a {
-    	    			    display: block;
-    	    			    padding-top: 34%;
-                    color: white;
-                    text-decoration: none;
-    	    			    vertical-align: middle;
-                    font-family: "futura-pt";
-                    font-weight: 400;
-                    font-style: normal;
-                    line-height: 1.6em;
-                    font-size: 1.5em;
-                    letter-spacing: 0.5px;
-    	    		   }
-              }
-    	    } //.grid-item
-      }
-}
+    } //.grid-row
+} //.work-grid
 
 /* Overlay style */
 .overlay {
@@ -527,6 +535,9 @@ h1 {
     transition: transform 0.4s, opacity 0.4s;
 }
 
+
+
+
 @media screen and (max-height: 30.5em) {
     .overlay nav {
         height: 70%;
@@ -540,6 +551,10 @@ h1 {
 @media screen and (max-width: 1000px) {
     .mobile {
         display: block;
+
+        .grid-item {
+            @include span-columns(6);
+        }
     }
 
     .first {
@@ -595,6 +610,10 @@ h1 {
 
     .desktop {
         display: block;
+
+        .grid-item {
+            @include span-columns(4);
+        }
     }
 
     .slides-heading {

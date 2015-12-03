@@ -1,8 +1,3 @@
-@mixin parallax() {
-	position: relative;
-	background-position: 50% 0;
-}
-
 @mixin plain-ul() {
 	list-style: none;
 	padding: 0;
@@ -10,24 +5,13 @@
 }
 
 @mixin inline-nav() {
-	@include plain-ul();
 
 	li {
 		display: inline;
 	}
 }
 
-@mixin min-height-width($h, $w) {
-	min-height: $h;
-	min-width: $w;
-}
-
-@mixin max-height-width($h, $w) {
-	max-height: $h;
-	max-width: $w;
-}
-
-@mixin height-width($h, $w) {
-	height: $h;
+@mixin width-height($w, $h) {
 	width: $w;
+	height: $h;
 }
