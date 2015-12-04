@@ -27,14 +27,6 @@
         $(this).find('.slide-overlay').fadeOut(250)
     })
 
-
-    // $('.slide').on('mouseenter', function(e) {
-    //     $(this).find('.slide-overlay').fadeIn(250)
-    // }).on('mouseleave', function(e) {
-    //     $(this).find('.slide-overlay').fadeOut(250)
-    // })
-
-
     $('.dropdown > .dropdown-title').click(function(e) {
         var $content = $(this).siblings('.dropdown-content')
         $content.is(':visible')

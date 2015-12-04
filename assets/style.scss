@@ -18,7 +18,6 @@ body {
     background-color: white;
 }
 
-
 header {
     #brand {
         float: left;
@@ -34,7 +33,7 @@ header {
 
 		ul {
 			@include inline-nav();
-            z-index: 999;
+            z-index: 998;
             position: fixed;
             top: 40px;
             right: 30px;
@@ -88,15 +87,15 @@ h1 {
 
 .first{
     padding: 4em;
-    max-width: 1240px;
+    max-width: 1100px;
 
     .avatar {
         background-color: white;
         float: left;
-        max-width: 550px;
-        max-width: 670px;
+        max-width: 485px;
+        max-width: auto;
         margin-right: 2em;
-        margin-bottom: 4em;
+        margin-bottom: 1em;
         border-radius: 4px;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
     }
@@ -105,20 +104,20 @@ h1 {
         font-family: "futura-pt";
         font-weight: 400;
         font-style: normal;
-        line-height: 1.6em;
-        font-size: 1.5em;
+        line-height: 1.55em;
+        font-size: 1.3em;
         letter-spacing: 0.5px;
         text-align: justify;
     }
 
     .lead {
-        margin-top: 0;
+        margin-top: 0.3em;
         margin-bottom: 1.6em;
         font-family: "adobe-garamond-pro";
         font-weight: 400;
         font-style: normal;
-        line-height: 1.5em;
-        font-size: 1.8em;
+        line-height: 1.45em;
+        font-size: 1.65em;
         letter-spacing: normal;
         text-align: justify;
     }
@@ -135,7 +134,7 @@ h1 {
         text-align: left;
         color: $heading-color;
         text-transform: uppercase;
-				font-size: 0.85em;
+		font-size: 0.85em;
         font-family: "futura-pt",sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -149,7 +148,7 @@ h1 {
 }
 
 .first.row {
-    margin: 0 auto 4em auto;
+    margin: 0 auto 0 auto;
     float: none;
 }
 
@@ -195,17 +194,21 @@ h1 {
     overflow: hidden;
     white-space: nowrap;
 
-    .slides-heading {
-      p {
-        text-align: left;
-        color: $heading-color;
-        text-transform: uppercase;
-				font-size: 0.6em;
-        font-family: "futura-pt",sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: 0.15em;
-      }
+    .slides-heading p {
+            color: black;
+            font-family: "adobe-garamond-pro";
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.5em;
+            letter-spacing: normal;
+            margin: 1em 0 0 0;
+    }
+
+    .bar {
+        width: 14px;
+        height: 2px;
+        background: #b0976d;
+        margin: 2em 0;
     }
 
     .slides {
@@ -254,28 +257,28 @@ h1 {
           }
 
 	    .slide-title {
-				float: left;
-        padding: 0.7em;
-        width: 100%;
-        font-family: "futura-pt",sans-serif;
-        color: black;
-        text-decoration: none;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 1.4em;
+    		float: left;
+            padding: 0.7em;
+            width: 100%;
+            font-family: "futura-pt",sans-serif;
+            color: black;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.4em;
       }
 
 			.slide-position {
-        float: right;
-        padding: 0.55em 0 0.55em 0;
-        text-align: right;
-        text-transform: uppercase;
-				font-size: 0.6em;
-        font-family: "futura-pt",sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: 0.15em;
-				color: $heading-color;
+                float: right;
+                padding: 0.55em 0 0.55em 0;
+                text-align: right;
+                text-transform: uppercase;
+        		font-size: 0.6em;
+                font-family: "futura-pt",sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: 0.15em;
+        		color: $heading-color;
 			}
 
     #slide-1 {
@@ -339,16 +342,17 @@ h1 {
     @include span-columns(12);
     padding: 0 3%;
 	background-color: $work-background-color;
+    // background-color: #23252B;
 
     .work-header {
-    	text-align: center;
-      margin-top: 30px;
+        text-align: center;
+        margin-top: 30px;
 
     	.work-header-bg {
-    		z-index: -1;
+    	    z-index: -1;
     		font-size: 20em;
-        font-style: normal;
-        font-weight: 800;
+            font-style: normal;
+            font-weight: 800;
     		color: #545454;
     	}
 
@@ -461,15 +465,14 @@ h1 {
     width: 25px;
     height: 25px;
     position: absolute;
-    right: 30px;
-    top: 40px;
+    right: 40px;
+    top: 50px;
     overflow: hidden;
     border: none;
     background: url(../public/cross.svg) no-repeat center center;
     text-indent: 200%;
     color: transparent;
     outline: none;
-    z-index: 100;
 }
 
 /* Menu style */
@@ -512,7 +515,7 @@ h1 {
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-    color: #f0f0f0;
+    color: #b0976d;
     text-decoration: none;
 }
 
@@ -527,6 +530,7 @@ h1 {
 }
 
 .overlay-scale.open {
+    z-index: 999;
     visibility: visible;
     opacity: 1;
     -webkit-transform: scale(1);
@@ -534,9 +538,6 @@ h1 {
     -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
     transition: transform 0.4s, opacity 0.4s;
 }
-
-
-
 
 @media screen and (max-height: 30.5em) {
     .overlay nav {
