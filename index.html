@@ -12,26 +12,25 @@
 
 <body class="tk-futura-pt">
 
-<div class="container">
+<nav id="nav">
+    <ul>
+        <li>
+          <a href="#" id="trigger-overlay">
+            <img src="public/menu.svg"/>
+          </a>
+        </li>
+    </ul>
+</nav>
 
+<div class="container animated fadeInDown">
     <header>
-        <div id="brand">
+        <div id="brand" class="animated fadeInDown">
             <img src="public/ag-logo.svg">
         </div>
-
-        <nav id="nav">
-            <ul>
-                <li>
-                  <a href="#" id="trigger-overlay">
-                    <img src="public/menu.svg"/>
-                  </a>
-                </li>
-            </ul>
-        </nav>
         <div class="clearfix"></div>
     </header>
 
-    <h1 class="tk-futura-pt">
+    <h1 class="tk-futura-pt animated fadeInDown">
       AXEL GILLINO
       <p class="tk-adobe-garamond-pro">Designer &amp; Interactive Art Director</p>
     </h1>
@@ -59,13 +58,7 @@
     <div class="row">
         <div id="gallery">
             <div class="slides-heading">
-                <p>
-                    I Work On
-                    <br>
-                    Great Projects
-                </p>
-                <div class="bar">
-                </div>
+                <p>Projects <span class="bar"></span></p>
             </div>
 
         <div class="slides">
@@ -246,7 +239,7 @@
                 </div>
             </div><!-- /#work-header -->
 
-            <div id="work-grid" class="grid desktop">
+            <div class="work-grid grid desktop">
                 <div class="grid-row">
                     <div class="grid-item" style="background-image: url('');">
                         <img src="public/work/barpass.png">
@@ -317,7 +310,7 @@
                 </div><!-- /.grid-row -->
             </div><!-- /#work-grid -->
 
-            <div id="work-grid" class="grid mobile">
+            <div class="work-grid grid mobile">
                 <div class="grid-row">
                     <div class="grid-item">
                         <img src="public/work/planet.png">
@@ -422,26 +415,5 @@
 
 <script type="text/javascript" src="assets/vendors/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="assets/main.js"></script>
-<script type="text/javascript">
-(function() {
-    var triggerBttn = $('#trigger-overlay'),
-        overlay     = $('.overlay'),
-        closeBttn   = $('.overlay-close');
-
-    function toggleOverlay() {
-        if( overlay.hasClass('open')) {
-            overlay.removeClass('open');
-            overlay.addClass('close');
-        } else {
-            overlay.addClass('open');
-            overlay.removeClass('close');
-        }
-    }
-
-    triggerBttn.on( 'click', toggleOverlay );
-    closeBttn.on( 'click', toggleOverlay );
-})();
-</script>
-
 </body>
 </html>

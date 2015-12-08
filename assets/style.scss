@@ -1,21 +1,63 @@
-@import "lib/variables";
-@import "lib/mixins";
+@import "variables";
 @import "vendors/bourbon/app/assets/stylesheets/bourbon";
 @import "vendors/neat/app/assets/stylesheets/neat";
+@import "vendors/animate-sass/animate";
+
+$mainBorderWidth: 20px;
 
 html, body {
     background: black;
 }
 
+// beginning of sass-animate code
 body {
-    padding: 20px 20px 20px 20px;
+    -webkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
 }
 
+.animated {
+    @include animate-prefixer(animation-duration, $base-duration);
+    @include animate-prefixer(animation-fill-mode, both);
+
+    &.hinge {
+        @include animate-prefixer(animation-duration, $base-duration * 2);
+    }
+} // end of sass-animate code
+
+#nav {
+    float: right;
+
+    ul {
+        @include inline-nav();
+        z-index: 998;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+
+        img {
+            width: 24px;
+        }
+
+        li a {
+            padding: 0 10px 0 10px;
+            text-transform: uppercase;
+            font-size: 0.7em;
+            font-weight: 700;
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+
 .container {
     @include outer-container(100%);
-    background-color: white;
+    background-color: #F9F9F9;
+    position: absolute;
+    margin: 0;
+    top: $mainBorderWidth;
+    right: $mainBorderWidth;
+    left: $mainBorderWidth;
 }
 
 header {
@@ -26,33 +68,6 @@ header {
             margin: 30px 0 0 30px;
             height: 60px;
         }
-    }
-
-    #nav {
-		float: right;
-
-		ul {
-			@include inline-nav();
-            z-index: 998;
-            position: fixed;
-            top: 40px;
-            right: 30px;
-
-          img {
-            width: 24px;
-          }
-
-			li {
-				a {
-					padding: 0 10px 0 10px;
-					text-transform: uppercase;
-                    font-size: 0.7em;
-                    font-weight: 700;
-                    color: black;
-                    text-decoration: none;
-				}
-			}
-		}
     }
 }
 
@@ -66,6 +81,7 @@ h1 {
     margin-top: 120px;
     text-align: center;
     font-family: "futura-pt";
+    color: #2E2E2E;
     font-weight: 400;
     font-style: normal;
     line-height: 0.6em;
@@ -76,6 +92,7 @@ h1 {
         margin-bottom: 130px;
         text-align: center;
         font-family: "adobe-garamond-pro";
+        color: #2E2E2E;
         font-weight: 400;
         font-style: italic;
         font-size: 0.55em;
@@ -154,6 +171,7 @@ h1 {
 
 .last.row {
      margin-bottom: 0;
+     background-color: black;
 }
 
 .row.experience {
@@ -194,21 +212,18 @@ h1 {
     overflow: hidden;
     white-space: nowrap;
 
-    .slides-heading p {
-            color: black;
-            font-family: "adobe-garamond-pro";
-            font-weight: 400;
-            font-style: normal;
-            font-size: 2.5em;
-            letter-spacing: normal;
-            margin: 1em 0 0 0;
+    .slides-heading {
+        margin-bottom: 1.5em;
     }
 
-    .bar {
-        width: 14px;
-        height: 2px;
-        background: #b0976d;
-        margin: 2em 0;
+    .slides-heading p {
+        color: #5a6e7f;
+        font-family: "adobe-garamond-pro";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5em;
+        letter-spacing: normal;
+        margin: 1em 0 0 0;
     }
 
     .slides {
@@ -237,49 +252,49 @@ h1 {
         -o-transition: box-shadow 0.3s ease;
         transition: box-shadow 0.3s ease;
 
-        }
+    }
 
-        .slide-media {
-            background-size: cover;
-            border-radius: 4px 4px 0 0;
-            height: 348px;
-		    }
+    .slide-media {
+        background-size: cover;
+        border-radius: 4px 4px 0 0;
+        height: 348px;
+	    }
 
-        .slide:hover {
+    .slide:hover {
 
-          -webkit-transition: box-shadow 0.3s ease;
-          -moz-transition: box-shadow 0.3s ease;
-          -ms-transition: box-shadow 0.3s ease;
-          -o-transition: box-shadow 0.3s ease;
-          transition: box-shadow 0.3s ease;
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
+      -webkit-transition: box-shadow 0.3s ease;
+      -moz-transition: box-shadow 0.3s ease;
+      -ms-transition: box-shadow 0.3s ease;
+      -o-transition: box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
 
-          }
-
-	    .slide-title {
-    		float: left;
-            padding: 0.7em;
-            width: 100%;
-            font-family: "futura-pt",sans-serif;
-            color: black;
-            text-decoration: none;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 1.4em;
       }
 
-			.slide-position {
-                float: right;
-                padding: 0.55em 0 0.55em 0;
-                text-align: right;
-                text-transform: uppercase;
-        		font-size: 0.6em;
-                font-family: "futura-pt",sans-serif;
-                font-style: normal;
-                font-weight: 500;
-                letter-spacing: 0.15em;
-        		color: $heading-color;
-			}
+    .slide-title {
+		float: left;
+        padding: 0.7em;
+        width: 100%;
+        font-family: "futura-pt",sans-serif;
+        color: #5a6e7f;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4em;
+      }
+
+    .slide-position {
+        float: right;
+        padding: 0.55em 0 0.55em 0;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 0.6em;
+        font-family: "futura-pt",sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        color: $heading-color;
+    }
 
     #slide-1 {
         margin-left: 2em;
@@ -342,6 +357,7 @@ h1 {
     @include span-columns(12);
     padding: 0 3%;
 	background-color: $work-background-color;
+    margin-bottom: $mainBorderWidth;
     // background-color: #23252B;
 
     .work-header {
@@ -358,7 +374,7 @@ h1 {
 
     	.work-header-title {
     		margin-top: -260px;
-    		font-size: 2.9em;
+            font-size: 2.9em;
     		text-transform: uppercase;
     		letter-spacing: 0.17em;
     		color: white;
@@ -374,10 +390,10 @@ h1 {
     }
 } //#work
 
-#work-grid {
+.work-grid {
     padding: 10px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto ;
 
 .grid-row {
     &:after {
@@ -515,7 +531,7 @@ h1 {
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-    color: #b0976d;
+    color: #5a6e7f;
     text-decoration: none;
 }
 
@@ -550,6 +566,14 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
+    .bar {
+        margin-bottom: 0.2em;
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        background: black;
+    }
+
     .mobile {
         display: block;
 
@@ -605,6 +629,14 @@ h1 {
 }
 
 @media screen and (min-width: 1001px) {
+    .bar {
+        margin-bottom: 0.2em;
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        background: black;
+    }
+
     .mobile {
         display: none;
     }

@@ -11,3 +11,20 @@ $adobe-garamond-pro: 'Adobe Garamond Pro, serif';
 $futura-pt-medium: 'Futura PT Medium, sans-serif';
 $futura-pt-heavy: 'Futura PT Heavy, sans-serif';
 $futura-pt-book: 'Futura PT Book, sans-serif';
+
+@mixin plain-ul() {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin inline-nav() {
+	li {
+		display: inline;
+	}
+}
+
+@mixin width-height($w, $h) {
+	width: $w;
+	height: $h;
+}
