@@ -6,7 +6,7 @@
 $mainBorderWidth: 20px;
 
 html, body {
-    background: black;
+    background: #2E2E2E;
 }
 
 // beginning of sass-animate code
@@ -44,7 +44,7 @@ body {
             text-transform: uppercase;
             font-size: 0.7em;
             font-weight: 700;
-            color: black;
+            color: #2E2E2E;
             text-decoration: none;
         }
     }
@@ -92,7 +92,7 @@ h1 {
         margin-bottom: 130px;
         text-align: center;
         font-family: "adobe-garamond-pro";
-        color: #2E2E2E;
+        color: #5a6e7f;
         font-weight: 400;
         font-style: italic;
         font-size: 0.55em;
@@ -107,7 +107,7 @@ h1 {
     max-width: 1100px;
 
     .avatar {
-        background-color: white;
+        background-color: #F9F9F9;
         float: left;
         max-width: 485px;
         max-width: auto;
@@ -119,6 +119,7 @@ h1 {
 
     p {
         font-family: "futura-pt";
+        color: #5a6e7f;
         font-weight: 400;
         font-style: normal;
         line-height: 1.55em;
@@ -130,6 +131,7 @@ h1 {
     .lead {
         margin-top: 0.3em;
         margin-bottom: 1.6em;
+        color: #2E2E2E;
         font-family: "adobe-garamond-pro";
         font-weight: 400;
         font-style: normal;
@@ -161,6 +163,8 @@ h1 {
     .row-content {
         @include shift(1);
         @include span-columns(8);
+        font-size: 1.3em;
+        letter-spacing: 0.04em;
     }
 }
 
@@ -171,7 +175,7 @@ h1 {
 
 .last.row {
      margin-bottom: 0;
-     background-color: black;
+     background-color: #2E2E2E;
 }
 
 .row.experience {
@@ -571,7 +575,7 @@ h1 {
         display: inline-block;
         width: 50px;
         height: 2px;
-        background: black;
+        background: $heading-color;
     }
 
     .mobile {
@@ -630,11 +634,12 @@ h1 {
 
 @media screen and (min-width: 1001px) {
     .bar {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.17em;
+        margin-left: 0.1em;
         display: inline-block;
         width: 50px;
         height: 2px;
-        background: black;
+        background: $heading-color;
     }
 
     .mobile {
