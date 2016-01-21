@@ -6,7 +6,7 @@
 $mainBorderWidth: 20px;
 
 html, body {
-    background: #2E2E2E;
+    min-width: 100%;
 }
 
 // beginning of sass-animate code
@@ -71,14 +71,14 @@ header {
     }
 }
 
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
+// .clearfix:after {
+// 	content: "";
+// 	display: table;
+// 	clear: both;
+// }
 
 h1 {
-    margin-top: 120px;
+    margin-top: 210px;
     text-align: center;
     font-family: "futura-pt";
     color: #2E2E2E;
@@ -606,6 +606,10 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
+    body {
+        background-color: #F9F9F9;
+    }
+
     .container {
         position: absolute;
         margin: 0;
@@ -681,6 +685,10 @@ h1 {
 }
 
 @media screen and (min-width: 1001px) {
+    body {
+        background: #2E2E2E;
+    }
+
     .bar {
         margin-bottom: 0.17em;
         margin-left: 0.1em;
