@@ -151,7 +151,7 @@ h1 {
         max-width: 1250px;
         margin: 0 auto;
         padding-left: 3%;
-        padding-top: 20px;
+        padding-top: 80px;
     }
 
     .row-title {
@@ -360,6 +360,24 @@ h1 {
 
         #employer-info {
             padding-top: 20px;
+
+            .date {
+                color: #5a6e7f;
+            }
+
+            .employer {
+
+            }
+
+            .city {
+                font-family: "adobe-garamond-pro";
+                font-style: italic;
+            }
+
+            a {
+                color: #5a6e7f;
+                text-decoration: none;
+            }
         }
     }
 
