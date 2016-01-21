@@ -569,9 +569,14 @@ h1 {
     text-decoration: none;
 }
 
-.overlay ul li a:hover,
-.overlay ul li a:focus {
+.overlay ul li a:hover {
     color: #5a6e7f;
+    text-decoration: none;
+}
+
+.overlay ul li a:active,
+.overlay ul li a:focus {
+    color: #fff;
     text-decoration: none;
 }
 
