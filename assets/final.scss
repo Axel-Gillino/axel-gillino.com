@@ -23,14 +23,11 @@ body {
 
 .container {
     @include outer-container(100%);
+    
     background-color: #F9F9F9;
     position: absolute;
     margin: 0;
     overflow: auto;
-
-    &:after {
-        content: " ";
-    }
 }
 
 .brand {
@@ -155,7 +152,7 @@ h1 {
     }
 
     .slide-title {
-        color: #5a6e7f;
+        color: #5A6E7F;
         float: left;
         font-size: 1.4em;
         font-style: normal;
@@ -176,6 +173,55 @@ h1 {
         text-align: right;
     }
 }
+
+
+// .row {
+//     @include span-columns(12);
+
+//     .row-body {
+//         width: 100%;
+//         max-width: 1250px;
+//         margin: 0 auto;
+//         padding-left: 3%;
+//         padding-top: 80px;
+//     }
+
+//     .row-title {
+//         @include shift(1);
+//         @include span-columns(1);
+//         color: $heading-color;
+//         text-transform: uppercase;
+//         font-size: 0.85em;
+//         line-height: 2.3em;
+//         font-family: "futura-pt",sans-serif;
+//         font-style: normal;
+//         font-weight: 500;
+//         letter-spacing: 0.15em;
+//         margin-right: 5%;
+//     }
+
+//     .row-content {
+//         @include span-columns(9);
+
+//         font-size: 1.3em;
+//         letter-spacing: 0.04em;
+//     }
+
+//     .column {
+//         float: left;
+//         margin: 0;
+//         padding: 0 0 15px 0;
+//         list-style-type: none;
+//         width: 33%;
+
+//         li {
+//             padding: 0 10px 20px 10px;
+//             text-decoration: none;
+//             line-height: 1.3em;
+//         }
+//     }
+// }
+
 
 
 .uppercase {
