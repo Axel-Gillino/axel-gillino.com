@@ -72,9 +72,9 @@ header {
 }
 
 // .clearfix:after {
-// 	content: "";
-// 	display: table;
-// 	clear: both;
+//     content: "";
+//     display: table;
+//     clear: both;
 // }
 
 h1 {
@@ -159,7 +159,7 @@ h1 {
         @include span-columns(1);
         color: $heading-color;
         text-transform: uppercase;
-		font-size: 0.85em;
+        font-size: 0.85em;
         line-height: 2.3em;
         font-family: "futura-pt",sans-serif;
         font-style: normal;
@@ -273,7 +273,7 @@ h1 {
         background-size: cover;
         border-radius: 4px 4px 0 0;
         height: 348px;
-	    }
+        }
 
     .slide:hover {
 
@@ -287,7 +287,7 @@ h1 {
       }
 
     .slide-title {
-		float: left;
+        float: left;
         padding: 0.7em;
         width: 100%;
         font-family: "futura-pt",sans-serif;
@@ -393,7 +393,7 @@ h1 {
 #work {
     @include span-columns(12);
     padding: 0 3%;
-	background-color: $work-background-color;
+    background-color: $work-background-color;
     margin-bottom: $mainBorderWidth;
     // background-color: #23252B;
 
@@ -402,29 +402,29 @@ h1 {
         margin-top: 70px;
         margin-bottom: 90px;
 
-    	.work-header-bg {
-    	    z-index: -1;
-    		font-size: 20em;
+        .work-header-bg {
+            z-index: -1;
+            font-size: 20em;
             font-style: normal;
             font-weight: 800;
-    		color: #545454;
-    	}
+            color: #545454;
+        }
 
-    	.work-header-title {
-    		margin-top: -260px;
+        .work-header-title {
+            margin-top: -260px;
             font-size: 2.9em;
-    		text-transform: uppercase;
-    		letter-spacing: 0.17em;
-    		color: white;
-    	}
+            text-transform: uppercase;
+            letter-spacing: 0.17em;
+            color: white;
+        }
 
-    	.work-header-subtext {
+        .work-header-subtext {
         img {
           width: 146px;
           margin: 15 auto;
         }
-    		padding-bottom: 100px;
-    	}
+            padding-bottom: 100px;
+        }
     }
 } //#work
 

@@ -105,11 +105,11 @@ h1 {
 }
 
 .gallery {
+    font-family: "futura-pt", sans-serif;
     margin-bottom: 4em;
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
-
 
     .slides-heading {
         font-size: 4em;
@@ -117,32 +117,36 @@ h1 {
     }
 
     .slides {
-        height: 447px;
         width: 100%;
         overflow-x: auto;
+        padding: 24px 0;
         white-space: nowrap;
     }
 
     .slide {
-        display: inline-block;
-        margin-left: 1em;
-        margin-right: 1em;
-        width: 498px;
-        height: auto;
-        border-radius: 4px;
         background-color: #fff;
-        cursor: pointer;
-
+        border-radius: 4px;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        display: inline-block;
+        height: auto;
         transform: translateZ(0);
         transition: box-shadow 0.3s ease;
+        width: 500px;
 
+        &:nth-child(1n) {
+            margin-left: 2em;
+        }
+
+        &:last-child {
+            margin-right: 2em;
+        }
     }
 
     .slide-media {
         background-size: cover;
         border-radius: 4px 4px 0 0;
-        height: 348px;
+        height: 350px;
     }
 
     .slide:hover {
@@ -151,32 +155,27 @@ h1 {
     }
 
     .slide-title {
-        float: left;
-        padding: 0.7em;
-        width: 100%;
-        font-family: "futura-pt", sans-serif;
         color: #5a6e7f;
-        text-decoration: none;
+        float: left;
+        font-size: 1.4em;
         font-style: normal;
         font-weight: 700;
-        font-size: 1.4em;
-      }
+        text-decoration: none;
+        padding: 0.7em;
+        width: 100%;
+    }
 
     .slide-position {
+        color: $heading-color;
         float: right;
-        padding: 0.55em 0 0.55em 0;
-        text-align: right;
-        text-transform: uppercase;
         font-size: 0.6em;
-        font-family: "futura-pt", sans-serif;
         font-style: normal;
         font-weight: 500;
         letter-spacing: 0.15em;
-        color: $heading-color;
+        padding: 0.55em 0;
+        text-align: right;
     }
 }
-
-
 
 
 .uppercase {
@@ -184,10 +183,10 @@ h1 {
 }
 
 .bar {
-    display: inline-block;
-    width: 50px;
-    height: 2px;
     background: $heading-color;
+    display: inline-block;
+    height: 2px;
+    width: 50px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -205,8 +204,18 @@ h1 {
 
     .nav img { width: 65px; }
 
-    .intro   { font-size: 2em; }
+    .intro,   
     .gallery { font-size: 2em; }
+
+    .slides {
+        .slide {
+            width: 714px;
+        }
+
+        .slide-media {
+            height: 500px;
+        }
+    }
 
     .container {
         top: 0;
@@ -219,8 +228,7 @@ h1 {
     .bar {
         margin-bottom: 0.2em;
     }
-
-}
+} 
 
 @media screen and (min-width: 1001px) {
     body { background: #2E2E2E; }
