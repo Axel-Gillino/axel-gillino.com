@@ -3,19 +3,21 @@
 @import "vendors/neat/app/assets/stylesheets/neat";
 @import "vendors/animate-sass/animate";
 
-$mainBorderWidth: 20px;
+body {
+    background: #2E2E2E;
+}
 
 .nav {
     ul {
-        @include inline-nav();
-        z-index: 998;
         position: fixed;
-        top: 40px;
         right: 40px;
+        top: 40px;
+        z-index: 998;
     }
 
-    img { width: 24px; }
+    li  { display: inline; }
     a   { padding: 0 10px; }
+    img { width: 24px; }
 }
 
 .container {
@@ -23,18 +25,111 @@ $mainBorderWidth: 20px;
     background-color: #F9F9F9;
     position: absolute;
     margin: 0;
-    top: $mainBorderWidth;
-    right: $mainBorderWidth;
-    left: $mainBorderWidth;
+    overflow: auto;
+
+    &:after {
+        content: " ";
+    }
 }
 
-header {
-    #brand {
-        float: left;
 
-        img {
-            margin: 30px 0 0 30px;
-            height: 60px;
-        }
+.brand {
+    img {
+        margin: 30px 0 0 30px;
+        height: 60px;
+    }
+}
+
+h1 {
+    font-weight: 400;
+    margin: 160px 0 120px 0;
+    text-align: center;
+
+    .title {
+        color: #2E2E2E;
+        font-size: 2.75em;
+        font-family: "futura-pt";
+        letter-spacing: 0.1em;
+        line-height: 0.5em;
+    }
+
+    p {
+        color: #5a6e7f;
+        font-family: "adobe-garamond-pro";
+        font-size: 1.5em;
+        font-style: italic;
+    }
+}
+
+.intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 80%;
+
+    .avatar {
+        background-color: #F9F9F9;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        float: left;
+        max-width: 485px;
+        margin: 0 2em 1em 0;
+    }
+
+    p {
+        font-family: "futura-pt";
+        color: #5a6e7f;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.55em;
+        font-size: 1.3em;
+        letter-spacing: 0.5px;
+        text-align: justify;
+    }
+}
+
+
+
+// .lead {
+//     margin-top: 0.3em;
+//     margin-bottom: 1.6em;
+//     color: #2E2E2E;
+//     font-family: "adobe-garamond-pro";
+//     font-weight: 400;
+//     font-style: normal;
+//     line-height: 1.45em;
+//     font-size: 1.65em;
+//     letter-spacing: normal;
+//     text-align: justify;
+// }
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1000px) {
+    .mobile  { display: block; }
+    .desktop { display: none; }
+
+    body { background-color: #F9F9F9; }
+
+    .container {
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .mobile  { display: none; }
+    .desktop { display: block; }
+
+    body { background: #2E2E2E; }
+
+    .container {
+        top: 20px;
+        right: 20px;
+        left: 20px;
+        bottom: 20px;
     }
 }
