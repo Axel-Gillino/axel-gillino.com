@@ -80,8 +80,9 @@ h1 {
 
         &.mobile {
             float: none;
-            width: 100%;
             margin-bottom: 2em;
+            max-width: auto;
+            width: 100%;
         }
     }
 
