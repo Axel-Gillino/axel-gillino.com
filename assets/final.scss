@@ -112,10 +112,11 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
+    body     { background-color: #F9F9F9; }
+
     .mobile  { display: block; }
     .desktop { display: none; }
-
-    body { background-color: #F9F9F9; }
+    .intro   { font-size: 1.5em; }
 
     .container {
         top: 0;
@@ -126,10 +127,10 @@ h1 {
 }
 
 @media screen and (min-width: 1001px) {
+    body { background: #2E2E2E; }
+
     .mobile  { display: none; }
     .desktop { display: block; }
-
-    body { background: #2E2E2E; }
 
     .container {
         top: 20px;
