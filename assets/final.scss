@@ -127,13 +127,10 @@ h1 {
         cursor: pointer;
         display: inline-block;
         height: auto;
+        margin-left: 2em;
         transform: translateZ(0);
         transition: box-shadow 0.3s ease;
         width: 500px;
-
-        &:nth-child(1n) {
-            margin-left: 2em;
-        }
 
         &:last-child {
             margin-right: 2em;
@@ -269,7 +266,6 @@ h1 {
         left: 0;
         bottom: 0;
     }
-
 
     .bar {
         margin-bottom: 0.2em;
