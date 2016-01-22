@@ -1,4 +1,4 @@
-;(function() {
+(function() {
     'use strict'
 
     $('.grid-item').on('mouseenter', function(e) {
@@ -13,9 +13,9 @@
         $(this).find('.slide-overlay').fadeOut(250)
     })
 
-    var triggerBttn = $('#trigger-overlay'),
-        overlay     = $('.overlay'),
-        closeBttn   = $('.overlay-close');
+    var triggerBtn = $('#trigger-overlay'),
+        overlay    = $('.overlay'),
+        closeBtn   = $('.overlay-close');
 
     function toggleOverlay() {
         if( overlay.hasClass('open')) {
@@ -27,6 +27,6 @@
         }
     }
 
-    triggerBttn.on( 'click', toggleOverlay );
-    closeBttn.on( 'click', toggleOverlay );
+    triggerBtn.on( 'click', toggleOverlay );
+    closeBtn.on( 'click', toggleOverlay );
 })();
