@@ -154,7 +154,7 @@ h1 {
         float: left;
         padding: 0.7em;
         width: 100%;
-        font-family: "futura-pt",sans-serif;
+        font-family: "futura-pt", sans-serif;
         color: #5a6e7f;
         text-decoration: none;
         font-style: normal;
@@ -168,7 +168,7 @@ h1 {
         text-align: right;
         text-transform: uppercase;
         font-size: 0.6em;
-        font-family: "futura-pt",sans-serif;
+        font-family: "futura-pt", sans-serif;
         font-style: normal;
         font-weight: 500;
         letter-spacing: 0.15em;
@@ -195,7 +195,18 @@ h1 {
 
     .mobile  { display: block; }
     .desktop { display: none; }
+
+    .brand {
+        img {
+            margin: 30px 0 0 30px;
+            height: 130px;
+        }
+    }
+
+    .nav img { width: 65px; }
+
     .intro   { font-size: 2em; }
+    .gallery { font-size: 2em; }
 
     .container {
         top: 0;
@@ -216,6 +227,13 @@ h1 {
 
     .mobile  { display: none; }
     .desktop { display: block; }
+
+    .brand {
+        img {
+            margin: 30px 0 0 30px;
+            height: 60px;
+        }
+    }
 
     .container {
         top: 20px;
