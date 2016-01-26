@@ -1,5 +1,11 @@
+var carousel;
 (function() {
     'use strict'
+
+    carousel = $("#scrolling ul");
+    carousel.itemslide();
+    console.log(carousel);
+
 
     $('.grid-item').on('mouseenter', function(e) {
         $(this).find('.work-overlay').fadeIn(250)

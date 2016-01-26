@@ -5,6 +5,8 @@
 
 body {
     background: #2E2E2E;
+    -webkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav {
@@ -22,7 +24,7 @@ body {
 
 .container {
     @include outer-container(100%);
-    
+
     background-color: #F9F9F9;
     position: absolute;
     margin: 0;
@@ -69,7 +71,7 @@ h1 {
         border-radius: 4px;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
         float: left;
-    
+
         &.desktop {
             margin: 0 2em 1em 0;
             max-width: 485px;
@@ -105,7 +107,7 @@ h1 {
     margin-bottom: 4em;
     overflow: hidden;
     width: 100%;
-    white-space: nowrap;
+    // white-space: nowrap;
 
     .slides-heading {
         font-size: 4em;
@@ -171,52 +173,52 @@ h1 {
 }
 
 
-// .row {
-//     @include span-columns(12);
+.row {
+    @include span-columns(12);
 
-//     .row-body {
-//         width: 100%;
-//         max-width: 1250px;
-//         margin: 0 auto;
-//         padding-left: 3%;
-//         padding-top: 80px;
-//     }
+    .row-body {
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+        padding-left: 3%;
+        padding-top: 80px;
+    }
 
-//     .row-title {
-//         @include shift(1);
-//         @include span-columns(1);
-//         color: $heading-color;
-//         text-transform: uppercase;
-//         font-size: 0.85em;
-//         line-height: 2.3em;
-//         font-family: "futura-pt",sans-serif;
-//         font-style: normal;
-//         font-weight: 500;
-//         letter-spacing: 0.15em;
-//         margin-right: 5%;
-//     }
+    .row-title {
+        @include shift(1);
+        @include span-columns(1);
+        color: $heading-color;
+        text-transform: uppercase;
+        font-size: 0.85em;
+        line-height: 2.3em;
+        font-family: "futura-pt",sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        margin-right: 5%;
+    }
 
-//     .row-content {
-//         @include span-columns(9);
+    .row-content {
+        @include span-columns(9);
 
-//         font-size: 1.3em;
-//         letter-spacing: 0.04em;
-//     }
+        font-size: 1.3em;
+        letter-spacing: 0.04em;
+    }
 
-//     .column {
-//         float: left;
-//         margin: 0;
-//         padding: 0 0 15px 0;
-//         list-style-type: none;
-//         width: 33%;
+    .column {
+        float: left;
+        margin: 0;
+        padding: 0 0 15px 0;
+        list-style-type: none;
+        width: 33%;
 
-//         li {
-//             padding: 0 10px 20px 10px;
-//             text-decoration: none;
-//             line-height: 1.3em;
-//         }
-//     }
-// }
+        li {
+            padding: 0 10px 20px 10px;
+            text-decoration: none;
+            line-height: 1.3em;
+        }
+    }
+}
 
 
 
@@ -246,7 +248,7 @@ h1 {
 
     .nav img { width: 65px; }
 
-    .intro,   
+    .intro,
     .gallery { font-size: 2em; }
 
     .slides {
@@ -269,7 +271,7 @@ h1 {
     .bar {
         margin-bottom: 0.2em;
     }
-} 
+}
 
 @media screen and (min-width: 1001px) {
     body { background: #2E2E2E; }
@@ -295,4 +297,22 @@ h1 {
         margin-bottom: 0.17em;
         margin-left: 0.1em;
     }
+}
+
+.slides {
+  width: 320px;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  background-color: #ccc;
+}
+
+.slides li {
+  display: inline;
+  background-color: wheat;
+  &:nth-child(odd) {
+    background-color: hotpink;
+  }
 }
