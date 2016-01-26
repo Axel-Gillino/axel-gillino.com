@@ -115,9 +115,9 @@ h1 {
     }
 
     .slides {
-        -webkit-overflow-scrolling: touch;
         overflow-y: hidden;
         overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
         padding: 24px 0;
         white-space: nowrap;
         width: 100%;
