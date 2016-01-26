@@ -7,6 +7,7 @@ body {
     background: #2E2E2E;
     -webkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
     -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
 }
 
 .nav {
