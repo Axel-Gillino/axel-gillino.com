@@ -115,10 +115,12 @@ h1 {
     }
 
     .slides {
-        width: 100%;
-        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: hidden;
+        overflow-x: scroll;
         padding: 24px 0;
         white-space: nowrap;
+        width: 100%;
     }
 
     .slide {
@@ -297,22 +299,4 @@ h1 {
         margin-bottom: 0.17em;
         margin-left: 0.1em;
     }
-}
-
-.slides {
-  width: 320px;
-  white-space: nowrap;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding: 1rem;
-  background-color: #ccc;
-}
-
-.slides li {
-  display: inline;
-  background-color: wheat;
-  &:nth-child(odd) {
-    background-color: hotpink;
-  }
 }
