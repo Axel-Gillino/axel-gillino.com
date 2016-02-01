@@ -1,0 +1,116 @@
+@import '../vendors/bourbon/app/assets/stylesheets/bourbon';
+@import '../vendors/neat/app/assets/stylesheets/neat';
+@import 'variables';
+
+.work {
+    @include span-columns(12);
+    background-color: $work-background-color;
+    margin-bottom: 20px;
+}
+
+.work-header {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+.work-header-bg {
+    z-index: -1;
+    font-size: 20em;
+    font-style: normal;
+    font-weight: 800;
+    color: #545454;
+}
+
+.work-header-title {
+    margin-top: -260px;
+    font-size: 2.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    color: white;
+}
+
+.work-header-subtext {
+    img {
+        width: 146px;
+        margin: 15 auto;
+    }
+
+    padding-bottom: 100px;
+}
+
+.work-grid {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1250px;
+
+    @include outer-container;
+} 
+
+.grid-item {
+    img {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    display: block;
+    margin-bottom: 2.35765%;
+    transition: box-shadow 0.3s ease;
+    transform: translateZ(0);
+}
+
+.work-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    bottom: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
+    display: none;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    
+    a {
+        display: inline-block;
+        padding-top: 34%;
+        color: white;
+        text-decoration: none;
+        vertical-align: middle;
+        font-family: "futura-pt";
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.6em;
+        font-size: 1.4em;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .grid-item {
+        @include span-columns(12);
+        @include omega(1n);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .grid-item {
+        @include span-columns(6);
+        @include omega(2n);
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .grid-item {
+        @include span-columns(4);
+        @include omega(3n);
+    }
+}

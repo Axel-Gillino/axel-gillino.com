@@ -1,0 +1,100 @@
+.gallery {
+    margin-bottom: 4em;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    h3.slides-heading {
+        color: #5a6e7f;
+        font-family: "adobe-garamond-pro";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5em;
+        letter-spacing: normal;
+        margin: 20px 0 20px 20px;
+    }
+
+    .bar {
+        background: $heading-color;
+        display: inline-block;
+        height: 2px;
+        width: 50px;
+        margin-bottom: 0.17em;
+        margin-left: 0.1em;
+    }
+
+    .slides {
+        height: 447px;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .slide {
+        display: inline-block;
+        width: 498px;
+        height: auto;
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        transform: translateZ(0);
+        transition: box-shadow 0.3s ease;
+
+        &:nth-child(1n) {
+            margin-left: 20px;
+        }
+
+        &:last-child {
+            margin-right: 20px;
+        }
+    }
+
+    .slide-media {
+        background-size: cover;
+        border-radius: 4px 4px 0 0;
+        height: 348px;
+    }
+
+    .slide:hover {
+        transition: box-shadow 0.3s ease;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    .slide-title {
+        float: left;
+        padding: 0.7em;
+        width: 100%;
+        font-family: "futura-pt", sans-serif;
+        color: #5a6e7f;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4em;
+    }
+
+    .slide-position {
+        float: right;
+        padding: 0.55em 0 0.55em 0;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 0.6em;
+        font-family: "futura-pt", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        color: $heading-color;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+}

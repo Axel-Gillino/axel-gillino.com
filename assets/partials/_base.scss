@@ -1,0 +1,44 @@
+@import '../vendors/bourbon/app/assets/stylesheets/bourbon';
+@import '../vendors/neat/app/assets/stylesheets/neat';
+@import 'variables';
+
+body { width: 100%; }
+
+.container {
+    @include outer-container(100%);
+
+    background-color: $container-background-color;
+
+    &:after {
+        background: $body-background-color;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile  { display: block; }
+    .desktop { display: none; }
+    
+    .container {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .mobile  { display: block; }
+    .desktop { display: none; }
+    
+    .container {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body { background: $body-background-color; }
+
+    .mobile  { display: none; }
+    .desktop { display: block; }
+
+    .container {
+        margin: $container-border-width;
+    }
+}
