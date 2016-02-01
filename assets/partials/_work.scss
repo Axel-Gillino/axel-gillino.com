@@ -5,7 +5,6 @@
 .work {
     @include span-columns(12);
     background-color: $work-background-color;
-    margin-bottom: 20px;
 }
 
 .work-header {
