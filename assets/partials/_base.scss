@@ -2,7 +2,12 @@
 @import '../vendors/neat/app/assets/stylesheets/neat';
 @import 'variables';
 
-body { width: 100%; }
+body { 
+    // Addresses a small issue in webkit: http://bit.ly/NEdoDq
+    -webkit-backface-visibility: hidden; 
+    -webkit-font-smoothing: antialiased;
+    width: 100%; 
+}
 
 .container {
     @include outer-container(100%);
