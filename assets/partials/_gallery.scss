@@ -1,8 +1,17 @@
+@import '../vendors/bourbon/app/assets/stylesheets/bourbon';
+@import '../vendors/neat/app/assets/stylesheets/neat';
+@import 'variables';
+
 .gallery {
     margin-bottom: 4em;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+    margin-top: 14px;
+
+    a {
+        text-decoration: none;
+    }
 
     h3.slides-heading {
         color: #5a6e7f;
@@ -11,7 +20,7 @@
         font-style: normal;
         font-size: 2.5em;
         letter-spacing: normal;
-        margin: 20px 0 20px 20px;
+        margin: 20px 0 25px 20px;
     }
 
     .bar {
@@ -24,7 +33,6 @@
     }
 
     .slides {
-        height: 447px;
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
@@ -32,7 +40,6 @@
 
     .slide {
         display: inline-block;
-        width: 498px;
         height: auto;
         border-radius: 4px;
         background-color: #fff;
@@ -53,7 +60,6 @@
     .slide-media {
         background-size: cover;
         border-radius: 4px 4px 0 0;
-        height: 348px;
     }
 
     .slide:hover {
@@ -62,8 +68,7 @@
     }
 
     .slide-title {
-        float: left;
-        padding: 0.7em;
+        padding: 0.54em 0em 0.57em 0.6em;
         width: 100%;
         font-family: "futura-pt", sans-serif;
         color: #5a6e7f;
@@ -74,9 +79,8 @@
     }
 
     .slide-position {
-        float: right;
-        padding: 0.55em 0 0.55em 0;
-        text-align: right;
+        display: block;
+        padding: 0.55em 0;
         text-transform: uppercase;
         font-size: 0.6em;
         font-family: "futura-pt", sans-serif;
@@ -88,39 +92,36 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .gallery {
+        margin-bottom: 0;
+    }
+    
     .slides {
-        height: 200px;
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
+        height: 330px;
     }
 
     .slide {
-        display: inline-block;
-        width: 223px;
-        height: auto;
-        border-radius: 4px;
-        background-color: #fff;
-        cursor: pointer;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
-        transform: translateZ(0);
-        transition: box-shadow 0.3s ease;
+        width: 250px;
 
-        &:nth-child(1n) {
-            margin-left: 20px;
-        }
-
-        &:last-child {
-            margin-right: 20px;
-        }
     }
 
     .slide-media {
-        background-size: cover;
-        border-radius: 4px 4px 0 0;
-        height: 200px;
+        height: 175px;
     }
 
+    .slide-title {
+        display: block;
+        float: none;
+        font-size: 1.4em;
+    }
+
+    .slide-position {
+        padding: 0.65em 0 0.35em 0;
+        display: block;
+        float: none;
+        font-size: 0.6em;
+        text-align: left;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -128,5 +129,28 @@
 }
 
 @media only screen and (min-width: 1025px) {
+    .slides {
+        height: 447px;
+    }
 
+    .slide {
+        width: 498px;
+    }
+
+    .slide-media {
+        height: 225px;
+    }
+
+    .slide-title {
+        display: inline;
+        float: left;
+        font-size: 1.4em;
+    }
+
+    .slide-position {
+        display: inline;
+        font-size: 0.6em;
+        float: right;
+        text-align: right;
+    } 
 }

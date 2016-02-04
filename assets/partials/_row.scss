@@ -8,7 +8,6 @@
     max-width: 1250px;
     margin: 0 auto;
     padding-left: 3%;
-    padding-top: 80px;
 
     .row-title {
         @include shift(1);
@@ -99,8 +98,8 @@
 
 @media only screen and (max-width: 767px) {
     ul.col li {
-        @include span-columns(12);
-        @include omega(1n);
+        @include span-columns(6);
+        @include omega(2n);
     }
 
     .current-position .current-employer {
@@ -116,6 +115,23 @@
         margin-left: 0;
         width: 100%;
     }
+
+    .row {
+        padding-top: 14px;
+    }
+
+    .row .row-title {
+        float: none;
+    }
+
+    .row .row-content ul li {
+        font-size: 0.6em;
+        width: 60%;
+    }
+
+    .row .row-content ul li:nth-child(2n) {
+        width: 25%;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -123,11 +139,23 @@
         @include span-columns(6);
         @include omega(2n);
     }
+
+    .row .row-title {
+        float: none;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
     ul.col li {
         @include span-columns(4);
         @include omega(3n);
+    }
+    
+    .row {
+        padding-top: 80px;
+    }
+
+    .row-title {
+        float: left;
     }
 }
