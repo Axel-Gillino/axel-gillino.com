@@ -15,7 +15,6 @@
 
         color: $heading-color;
         text-transform: uppercase;
-        font-size: 0.85em;
         line-height: 2.3em;
         font-family: "futura-pt",sans-serif;
         font-style: normal;
@@ -117,20 +116,28 @@
     }
 
     .row {
-        padding-top: 14px;
+        padding-top: 5px;
     }
 
     .row .row-title {
         float: none;
+        margin-left: 10px;
+        font-size: 1em;
     }
 
     .row .row-content ul li {
         font-size: 0.6em;
-        width: 60%;
+        width: 50%;
+        white-space: nowrap;
     }
 
     .row .row-content ul li:nth-child(2n) {
-        width: 25%;
+        width: 30%;
+        margin-right: 20px;
+    }
+
+    .row li {
+        padding: 10px;
     }
 }
 
@@ -157,5 +164,6 @@
 
     .row-title {
         float: left;
+        font-size: 1em;
     }
 }
