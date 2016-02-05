@@ -13,17 +13,6 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
     }
 
-    p {
-        font-family: "futura-pt";
-        color: #5a6e7f;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 1.55em;
-        font-size: 1.1em;
-        letter-spacing: 0.5px;
-        text-align: justify;
-    }
-
     .lead {
         margin-top: 0.3em;
         margin-bottom: 40px;
@@ -32,8 +21,19 @@
         font-weight: 400;
         font-style: normal;
         line-height: 1.45em;
-        font-size: 1.35em;
+        font-size: 1.33em;
         letter-spacing: normal;
+        text-align: justify;
+    }
+
+    p {
+        font-family: "futura-pt";
+        color: #5a6e7f;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.55em;
+        font-size: 1.03em;
+        letter-spacing: 0.5px;
         text-align: justify;
     }
 }

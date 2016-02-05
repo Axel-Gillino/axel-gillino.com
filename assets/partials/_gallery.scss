@@ -26,25 +26,25 @@
     .bar {
         background: $heading-color;
         display: inline-block;
-        height: 2px;
-        width: 50px;
         margin-bottom: 0.17em;
         margin-left: 0.1em;
+        height: 2px;
+        width: 50px;
     }
 
     .slides {
-        width: 100%;
         overflow-x: auto;
+        width: 100%;
         white-space: nowrap;
     }
 
     .slide {
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
         display: inline-block;
         height: auto;
-        border-radius: 4px;
-        background-color: #fff;
-        cursor: pointer;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
         transform: translateZ(0);
         transition: box-shadow 0.3s ease;
 
@@ -63,46 +63,48 @@
     }
 
     .slide:hover {
-        transition: box-shadow 0.3s ease;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.3s ease;
     }
 
     .slide-title {
-        padding: 0.54em 0em 0.57em 0.6em;
+        color: #5a6e7f;
         width: 100%;
         font-family: "futura-pt", sans-serif;
-        color: #5a6e7f;
-        text-decoration: none;
+        font-size: 1.4em;
         font-style: normal;
         font-weight: 700;
-        font-size: 1.4em;
+        padding: 0.54em 0em 0.57em 0.6em;
+        text-decoration: none;
     }
 
     .slide-position {
+        color: $heading-color;
         display: block;
-        padding: 0.55em 0;
-        text-transform: uppercase;
-        font-size: 0.6em;
         font-family: "futura-pt", sans-serif;
+        font-size: 0.6em;
         font-style: normal;
         font-weight: 500;
         letter-spacing: 0.15em;
-        color: $heading-color;
+        padding: 0.55em 0;
+        text-transform: uppercase;
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media only screen and (max-width: 1024px) {
     .gallery {
         margin-bottom: 0;
     }
     
     .slides {
-        height: 330px;
+        height: 300px;
     }
 
     .slide {
         width: 250px;
-
     }
 
     .slide-media {
@@ -116,29 +118,25 @@
     }
 
     .slide-position {
-        padding: 0.65em 0 0.35em 0;
         display: block;
         float: none;
         font-size: 0.6em;
+        padding: 0.65em 0 0.35em 0;
         text-align: left;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-}
-
 @media only screen and (min-width: 1025px) {
     .slides {
-        height: 447px;
+        height: 450px;
     }
 
     .slide {
-        width: 498px;
+        width: 500px;
     }
 
     .slide-media {
-        height: 225px;
+        height: 350px;
     }
 
     .slide-title {
@@ -151,6 +149,6 @@
         display: inline;
         font-size: 0.6em;
         float: right;
-        text-align: right;
+        margin-right: 10px;
     } 
 }

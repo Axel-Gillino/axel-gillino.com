@@ -7,7 +7,7 @@
 
     max-width: 1250px;
     margin: 0 auto;
-    padding-left: 3%;
+    padding-left: 15px;
 
     .row-title {
         @include shift(1);
@@ -115,19 +115,16 @@
         width: 100%;
     }
 
-    .row {
-        padding-top: 5px;
-    }
-
     .row .row-title {
         float: none;
         margin-left: 10px;
         font-size: 1em;
+        padding: 15px 0;
     }
 
     .row .row-content ul li {
-        font-size: 0.6em;
-        width: 50%;
+        font-size: 0.56em;
+        width: 58%;
         white-space: nowrap;
     }
 
@@ -149,6 +146,24 @@
 
     .row .row-title {
         float: none;
+        margin-left: 10px;
+        font-size: 1em;
+    }
+
+    .row .row-content ul li {
+        font-size: 0.9em;
+        font-weight: 200;
+        width: 60%;
+        white-space: nowrap;
+    }
+
+    .row .row-content ul li:nth-child(2n) {
+        width: 30%;
+        margin-right: 20px;
+    }
+
+    .row li {
+        padding: 10px;
     }
 }
 

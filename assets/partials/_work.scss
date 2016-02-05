@@ -8,25 +8,25 @@
 }
 
 .work-header {
-    text-align: center;
     margin-top: 70px;
     margin-bottom: 90px;
+    text-align: center;
 }
 
 .work-header-bg {
-    z-index: -1;
+    color: #545454;
     font-size: 20em;
     font-style: normal;
     font-weight: 800;
-    color: #545454;
+    z-index: -1;
 }
 
 .work-header-title {
-    margin-top: -260px;
-    font-size: 2.9em;
-    text-transform: uppercase;
-    letter-spacing: 0.17em;
     color: white;
+    font-size: 2.9em;
+    letter-spacing: 0.17em;
+    margin-top: -260px;
+    text-transform: uppercase;
 }
 
 .work-header-subtext {
@@ -39,10 +39,10 @@
 }
 
 .work-grid {
-    padding: 20px;
     width: 100%;
     margin: 0 auto;
     max-width: 1250px;
+    padding: 20px;
 
     @include outer-container;
 } 
@@ -95,8 +95,8 @@
 
 @media only screen and (max-width: 767px) {
     .grid-item {
-        @include span-columns(12);
-        @include omega(1n);
+        @include span-columns(6);
+        @include omega(2n);
     }
 }
 
