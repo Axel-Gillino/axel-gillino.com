@@ -45,44 +45,56 @@
     }
 }
 
+    // .row-content {
+    //     width: 100%; 
+    // }
 
-// current
-.current-position {
+    // .employer-logo {
+    //     background-image: url('./images/breather.svg');
+    //     background-repeat: no-repeat;
+    //     float: left;
+    //     margin-right: 50px;
+    //     padding: 5px 0 0 10px;
+
+    //     img { width: 64px; }
+    // }
+
+    // .employment-details {
+    //     margin-left: 100px;
+    //     width: 100%;
+    //     margin-bottom: 100px;
+    // }
+
+.current {
     @include span-columns(12);
 
-    .current-employer {
-        @include span-columns(1);
-        padding-bottom: 15px;
+    padding-bottom: 15px;
+
+    a { 
+        color: #495A6C; 
+        text-decoration: underline;
     }
 
     .employer-logo {
-        padding: 5px 0 0 10px;
-        margin-right: 50px;
-
-        img {
-            width: 64px;
-        }
+        background-image: url('images/breather.svg');
+        background-repeat: no-repeat;
+        float: left;
+        height: 64px;
+        width: 64px;
     }
 
     .employment-details {
-        @include span-columns(4);
-        list-style-type: none;
-
-        margin-left: 45px;
-        width: 80%;
+        margin-left: 10px;
+        width: 100%;
     }
 
-    .current-role {
-        p { margin: 0; }
+    .current-role { 
+        margin: 0; 
+        line-height: 1.8em;
     }
 
     .employer-info {
         padding-top: 20px;
-
-        a {
-            color: #5a6e7f;
-            text-decoration: none;
-        }
     }
 
     .date { color: #5a6e7f; }
@@ -95,25 +107,28 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 414px) {
     ul.col li {
         @include span-columns(6);
         @include omega(2n);
     }
 
-    .current-position .current-employer {
+    .employer-logo { display: none; }
+
+    .current-employer {
         text-align: center;
         width: 100%;
 
-        img {
-            width: 128px;
-        }
+        img { width: 128px; }
     }
 
-    .current-position .employment-details {
-        margin-left: 0;
+    .employment-details {
+        margin-left: 10px;
         width: 100%;
+        font-size: 0.78em;
     }
+
+    .employer-info { display: none; }
 
     .row .row-title {
         float: none;
@@ -142,11 +157,15 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 415px) and (max-width: 768px) {
     ul.col li {
         @include span-columns(6);
         @include omega(2n);
     }
+
+    .employer-logo { display: none; }
+    .employer-info { display: none; }
+    .current-role  { font-size: 1em; }
 
     .row .row-title {
         float: none;
@@ -155,15 +174,19 @@
     }
 
     .row .row-content ul li {
-        font-size: 0.9em;
-        font-weight: 200;
-        width: 60%;
+        font-size: 1em;
+        letter-spacing: 0.01em;
+        width: 67%;
         white-space: nowrap;
     }
 
     .row .row-content ul li:nth-child(2n) {
-        width: 30%;
+        width: 0;
         margin-right: 20px;
+    }
+    
+    .skills.row .row-content ul li:last-child {
+        display: none;
     }
 
     .row li {
@@ -171,10 +194,16 @@
     }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 769px) {
     ul.col li {
         @include span-columns(4);
         @include omega(3n);
+        
+        white-space: nowrap;
+    }
+
+    .current-role .subtext {
+        display: none;
     }
     
     .row {

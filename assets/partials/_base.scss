@@ -9,6 +9,10 @@ body {
     width: 100%; 
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     @include outer-container(100%);
 

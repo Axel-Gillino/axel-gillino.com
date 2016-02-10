@@ -4,6 +4,7 @@
 
 .work {
     @include span-columns(12);
+    margin-top: 100px;
     background-color: $work-background-color;
 }
 
