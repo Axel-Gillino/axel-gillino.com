@@ -3,94 +3,62 @@
 @import 'variables';
 
 .row {
-    @include span-columns(12);
-
-    max-width: 1250px;
-    margin: 0 auto;
-    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "futura-pt",sans-serif;
+    margin: 0 0 0 20px;
 
     .row-title {
-        @include shift(1);
-        @include span-columns(1);
-
         color: $heading-color;
         text-transform: uppercase;
-        line-height: 2.3em;
-        font-family: "futura-pt",sans-serif;
+        flex-basis: 18%;
         font-style: normal;
         font-weight: 500;
         letter-spacing: 0.15em;
-        margin-right: 5%;
+        width: 18%;
     }
 
-    .row-content {
-        @include span-columns(9);
-
-        font-size: 1.3em;
-        letter-spacing: 0.04em;
-    }
-
-    ul.col {
-        @include outer-container;
-        padding: 0 0 15px 0;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
         list-style-type: none;
-        margin-top: 0;
-        padding-top: 0;
+        padding: 0;
     }
 
     li {
-        padding: 0 10px 20px 10px;
         text-decoration: none;
         line-height: 1.3em;
+        white-space: nowrap;
+        font-size: 0.95em;
+        letter-spacing: 0.01em;
+        padding: 0 0 10px 0;
+        font-weight: 400;
     }
 }
 
-    // .row-content {
-    //     width: 100%; 
-    // }
-
-    // .employer-logo {
-    //     background-image: url('./images/breather.svg');
-    //     background-repeat: no-repeat;
-    //     float: left;
-    //     margin-right: 50px;
-    //     padding: 5px 0 0 10px;
-
-    //     img { width: 64px; }
-    // }
-
-    // .employment-details {
-    //     margin-left: 100px;
-    //     width: 100%;
-    //     margin-bottom: 100px;
-    // }
-
-.current {
-    @include span-columns(12);
-
-    padding-bottom: 15px;
-
+.employer {
     a { 
         color: #495A6C; 
         text-decoration: underline;
     }
 
     .employer-logo {
-        background-image: url('images/breather.svg');
+        background-image: url('../images/breather.svg');
         background-repeat: no-repeat;
         float: left;
+        margin: 25px 50px 0 10px;
         height: 64px;
         width: 64px;
     }
 
-    .employment-details {
-        margin-left: 10px;
-        width: 100%;
-    }
-
     .current-role { 
         margin: 0; 
-        line-height: 1.8em;
+    }
+
+    .employer-logo {
+        margin: 25px 50px 0 10px;
+        height: 100px;
+        width: 64px;
     }
 
     .employer-info {
@@ -99,7 +67,11 @@
 
     .date { color: #5a6e7f; }
 
-    .employer {}
+    .employer {
+        font-size: 0.95em;
+        font-family: "futura-pt",sans-serif;
+        padding: 30px 0 0 20px;
+    }
 
     .city {
         font-family: "adobe-garamond-pro";
@@ -107,111 +79,151 @@
     }
 }
 
-@media only screen and (max-width: 414px) {
-    ul.col li {
-        @include span-columns(6);
-        @include omega(2n);
-    }
-
-    .employer-logo { display: none; }
-
-    .current-employer {
-        text-align: center;
-        width: 100%;
-
-        img { width: 128px; }
-    }
-
-    .employment-details {
-        margin-left: 10px;
-        width: 100%;
-        font-size: 0.78em;
-    }
-
-    .employer-info { display: none; }
-
-    .row .row-title {
-        float: none;
+@media only screen and (min-width: 320px) {
+    .row-content li {
+        flex-basis: 50%;
+        width: 50%;
         font-size: 1em;
-        margin-left: 10px;
-        padding: 15px 0;
-    }
-
-    .row .row-content ul li {
-        font-size: 0.78em;
         letter-spacing: 0.01em;
-        width: 53%;
-        white-space: nowrap;
+        padding: 0 0 20px;
     }
 
-    .row .row-content ul li:nth-child(2n) {
-        width: 0;
+    // every other skill
+    .row-content li:nth-child(2n) {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 321px) and (max-width: 414px) {
+    .row .row-title {
+        flex-basis: 100%;
+        width: 100%;
     }
 
-    .skills.row .row-content ul li:last-child {
+    .row-content li {
+        flex-basis: 50%;
+        width: 50%;
+        font-size: 1em;
+        letter-spacing: 0.01em;
+        padding: 0 0 20px;
+    }
+
+    // last skill
+    .skills li:last-child {
         display: none;
     }
 
-    .row li {
-        padding: 10px;
+    // every other skill
+    .row-content li:nth-child(2n) {
+        padding-left: 20px;
     }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
-    ul.col li {
-        @include span-columns(6);
-        @include omega(2n);
+    .row .row-title {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .row { 
+        margin: 0 20px;
+        width: 90%;
+        max-width: 675px;
+        margin: 0 auto;
+    }
+
+    .row-content li {
+        flex-basis: 33%;
+        width: 33%;
+        font-size: 1.3em;
+        letter-spacing: 0.01em;
+        padding: 0 0 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .row .row-title {
+        margin: 65px 0 40px 0;
+    }
+
+    // every other skill
+    .row-content li:nth-child(2n) {
+        // width: 0;
+    }
+
+    .row-title { width: 100%; }
+    .row-content { width: 100%; }
+
+    .employer {
+        line-height: 2.2em;
     }
 
     .employer-logo { display: none; }
     .employer-info { display: none; }
-    .current-role  { font-size: 1em; }
+    .employment-details { margin: 0; }
 
-    .row .row-title {
-        float: none;
-        margin-left: 10px;
-        font-size: 1em;
-    }
-
-    .row .row-content ul li {
-        font-size: 1em;
-        letter-spacing: 0.01em;
-        width: 67%;
-        white-space: nowrap;
-    }
-
-    .row .row-content ul li:nth-child(2n) {
-        width: 0;
-        margin-right: 20px;
-    }
-    
-    .skills.row .row-content ul li:last-child {
-        display: none;
-    }
-
-    .row li {
-        padding: 10px;
-    }
+    .subtext-desktop { display: none; }
 }
 
 @media only screen and (min-width: 769px) {
-    ul.col li {
-        @include span-columns(4);
-        @include omega(3n);
-        
-        white-space: nowrap;
+    .row { 
+        width: 75%;
+        max-width: 1024px;
+        margin: 0 auto 80px auto
+    }
+    
+    .row-content {
+        flex-basis: 82%;
+        width: 82%;
     }
 
-    .current-role .subtext {
+    .row-content ul {
+        margin: 0 auto 20px;
+    }
+
+    .row-content li {
+        flex-basis: 33.3%;
+        width: 33.3%;
+        padding: 0 10px 20px 10px;
+        font-size: 1.3em;
+    }
+
+    .skills {
+        margin-top: 140px;
+    }
+
+    .employer {
+        font-size: 1.3em;
+    }
+
+    .current-role .position {
         display: none;
     }
     
-    .row {
-        padding-top: 80px;
+    .employment-details {
+        margin-left: 25px;
+
+        a { text-decoration: none; }
     }
 
-    .row-title {
-        float: left;
-        font-size: 1em;
+
+    .employer-info {
+        padding-bottom: 20px;
+    }
+    
+    .subtext-mobile { display: none; }
+    // .current-role .subtext { display: none; }
+}
+
+@media only screen and (min-width: 1024) {
+    .row { 
+        max-width: 1024px; 
+        margin: 0 auto;
+    }
+
+    .row-content ul {
+        font-size: 1.3em;
+        letter-spacing: 0.04em;
     }
 }
+
