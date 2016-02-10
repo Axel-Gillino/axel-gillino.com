@@ -117,20 +117,24 @@
 
     .row .row-title {
         float: none;
-        margin-left: 10px;
         font-size: 1em;
+        margin-left: 10px;
         padding: 15px 0;
     }
 
     .row .row-content ul li {
-        font-size: 0.56em;
-        width: 58%;
+        font-size: 0.78em;
+        letter-spacing: 0.01em;
+        width: 53%;
         white-space: nowrap;
     }
 
     .row .row-content ul li:nth-child(2n) {
-        width: 30%;
-        margin-right: 20px;
+        width: 0;
+    }
+
+    .skills.row .row-content ul li:last-child {
+        display: none;
     }
 
     .row li {
