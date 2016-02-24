@@ -6,17 +6,18 @@
     clear: both;
     display: block;
     width: 100%;
-    margin-top: 100px;
     background-color: $work-background-color;
 }
 
 .work-header {
-    margin-top: 70px;
-    margin-bottom: 90px;
+    margin-top: 150px;
+    margin-bottom: 70px;
+    padding-top: 70px;
     text-align: center;
 }
 
 .work-header-bg {
+    font-family: "futura-pt",sans-serif;
     color: #545454;
     font-size: 20em;
     font-style: normal;
@@ -25,7 +26,8 @@
 }
 
 .work-header-title {
-    color: white;
+    font-family: "futura-pt",sans-serif;
+    color: #F9F9F9;
     font-size: 2.9em;
     letter-spacing: 0.17em;
     margin-top: -260px;
@@ -35,10 +37,11 @@
 .work-header-subtext {
     img {
         width: 146px;
-        margin: 15 auto;
     }
 
     padding-bottom: 100px;
+    padding-top: 15px;
+
 }
 
 .work-grid {
@@ -49,7 +52,7 @@
     max-width: 1250px;
     padding: 20px 10px;
     width: 100%;
-} 
+}
 
 .grid-item {
     padding: 10px;
@@ -61,11 +64,12 @@
         border-radius: 4px;
         height: auto;
         width: 100%;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
     }
 }
 
 .work-overlay {
-    animation: fadeIn 0.25s; 
+    animation: fadeIn 0.25s;
     align-items: center;
     background-color: black;
     border-radius: 4px;
@@ -74,7 +78,7 @@
     color: white;
     display: none;
     font-family: "futura-pt";
-    font-size: 1.4em;   
+    font-size: 1.4em;
     left: 10px;
     line-height: 1.6em;
     justify-content: center;
@@ -101,6 +105,12 @@
         flex-basis: 50%;
         max-width: 50%;
     }
+
+    .work-header-title {
+        font-size: 2.3em;
+        margin-top: -251px;
+    }
+
 }
 
 @media only screen and (min-width: 1025px) {

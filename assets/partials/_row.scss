@@ -30,15 +30,17 @@
         line-height: 1.3em;
         white-space: nowrap;
         font-size: 0.95em;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.04em;
         padding: 0 0 10px 0;
         font-weight: 400;
     }
 }
 
 .employer {
-    a { 
-        color: #495A6C; 
+    letter-spacing: 0.04em;
+
+    a {
+        color: #495A6C;
         text-decoration: underline;
     }
 
@@ -51,8 +53,8 @@
         width: 64px;
     }
 
-    .current-role { 
-        margin: 0; 
+    .current-role {
+        margin: 0;
     }
 
     .employer-logo {
@@ -70,7 +72,6 @@
     .employer {
         font-size: 0.95em;
         font-family: "futura-pt",sans-serif;
-        padding: 30px 0 0 20px;
     }
 
     .city {
@@ -84,7 +85,6 @@
         flex-basis: 50%;
         width: 50%;
         font-size: 1em;
-        letter-spacing: 0.01em;
         padding: 0 0 20px;
     }
 
@@ -104,7 +104,6 @@
         flex-basis: 50%;
         width: 50%;
         font-size: 1em;
-        letter-spacing: 0.01em;
         padding: 0 0 20px;
     }
 
@@ -125,7 +124,7 @@
         width: 100%;
     }
 
-    .row { 
+    .row {
         margin: 0 20px;
         width: 90%;
         max-width: 675px;
@@ -136,7 +135,6 @@
         flex-basis: 33%;
         width: 33%;
         font-size: 1.3em;
-        letter-spacing: 0.01em;
         padding: 0 0 20px;
     }
 }
@@ -166,12 +164,17 @@
 }
 
 @media only screen and (min-width: 769px) {
-    .row { 
+    .row {
         width: 75%;
         max-width: 1024px;
         margin: 0 auto 80px auto
     }
-    
+
+    .row-title {
+        font-size: 0.85em;
+        line-height: 2.3em;
+    }
+
     .row-content {
         flex-basis: 82%;
         width: 82%;
@@ -199,7 +202,7 @@
     .current-role .position {
         display: none;
     }
-    
+
     .employment-details {
         margin-left: 25px;
 
@@ -210,20 +213,18 @@
     .employer-info {
         padding-bottom: 20px;
     }
-    
+
     .subtext-mobile { display: none; }
     // .current-role .subtext { display: none; }
 }
 
 @media only screen and (min-width: 1024) {
-    .row { 
-        max-width: 1024px; 
+    .row {
+        max-width: 1024px;
         margin: 0 auto;
     }
 
     .row-content ul {
         font-size: 1.3em;
-        letter-spacing: 0.04em;
     }
 }
-

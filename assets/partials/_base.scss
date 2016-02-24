@@ -3,15 +3,6 @@
 @import 'variables';
 @import "../vendors/animate-sass/animate";
 
-
-
-body {
-    // Addresses a small issue in webkit: http://bit.ly/NEdoDq
-    -webkit-backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    width: 100%;
-}
-
 // beginning of sass-animate code
 .animated {
     @include animate-prefixer(animation-duration, $base-duration);
@@ -21,6 +12,13 @@ body {
         @include animate-prefixer(animation-duration, $base-duration * 2);
     }
 } // end of sass-animate code
+
+body {
+    // Addresses a small issue in webkit: http://bit.ly/NEdoDq
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+}
 
 a {
     text-decoration: none;

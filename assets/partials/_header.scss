@@ -8,14 +8,14 @@
 
 .nav {
     position: fixed;
-    top: 40px;
+    top: 50px;
     right: 40px;
     z-index: 998;
     padding: 0 10px 0 10px;
 
     a {}
 
-    img { width: 124px; }
+    img { width: 24px; }
 }
 
 h1 {
@@ -63,7 +63,7 @@ h1 {
 @media only screen and (min-width: 1025px) {
     h1 {
         font-size: 5.5em;
-        margin-top: 210px;
+        margin-top: 130px;
         margin-bottom: 130px;
     }
 
