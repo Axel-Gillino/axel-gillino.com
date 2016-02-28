@@ -87,10 +87,6 @@
 }
 
 
-.grid-item:hover .work-overlay {
-    display: flex;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 0.8; }
