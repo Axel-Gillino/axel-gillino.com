@@ -36,7 +36,7 @@ a {
 
 @media only screen and (max-width: 767px) {
     body {
-        background-color: black;
+        background-color: $body-background-color;
 
 
         .mobile  { display: block; }
