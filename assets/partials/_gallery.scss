@@ -4,11 +4,7 @@
 @import "../vendors/animate-sass/animate";
 
 .gallery {
-    margin-bottom: 4em;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 2.5em;
+    margin-bottom: 4em 0 2.5em;
 
     a {
         text-decoration: none;
@@ -36,6 +32,7 @@
         overflow-x: auto;
         width: 100%;
         white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
     }
 
     .slide {
