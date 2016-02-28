@@ -92,69 +92,80 @@
 @media only screen and (max-width: 1024px) {
     .gallery {
         margin-bottom: 0;
-    }
 
-    h3.slides-heading {
-        margin: 10px 0 25px 0.7em;
-    }
+        h3.slides-heading {
+            margin: 10px 0 25px 0.4em;
+        }
 
-    .slides {
-        height: 290px;
-    }
+        .slides {
+            height: 290px;
+        }
 
-    .slide {
-        width: 250px;
-    }
+        .slide {
+            width: 250px;
 
-    .slide-media {
-        height: 175px;
-    }
+            &:nth-child(1n) {
+                margin-left: 1.2em;
+            }
 
-    .slide-title {
-        display: block;
-        float: none;
-        font-size: 1.4em;
-        padding: 0.5em 0 0.6em 0.8em;
-    }
+            &:last-child {
+                margin-right: 1.2em;
+            }
+        }
 
-    .slide-position {
-        display: block;
-        float: none;
-        font-size: 0.6em;
-        text-align: left;
-        padding-top: 0.35em;
+        .slide-media {
+            height: 175px;
+        }
+
+        .slide-title {
+            display: block;
+            float: none;
+            font-size: 1.4em;
+            padding: 0.5em 0 0.6em 0.8em;
+        }
+
+        .slide-position {
+            display: block;
+            float: none;
+            font-size: 0.6em;
+            text-align: left;
+            padding-top: 0.35em;
+        }
     }
 }
 
 @media only screen and (min-width: 1025px) {
-    h3.slides-heading {
-        margin: 10px 0 25px 1em;
-    }
+    .gallery {
 
-    .slides {
-        height: 450px;
-        padding-left: 0.8em;
-    }
+        h3.slides-heading {
+            margin: 10px 0 25px 1em;
+        }
 
-    .slide {
-        width: 498px;
-    }
+        .slides {
+            height: 450px;
+            padding-left: 0.8em;
+        }
 
-    .slide-media {
-        height: 348px;
-    }
+        .slide {
+            width: 498px;
+        }
 
-    .slide-title {
-        display: inline;
-        float: left;
-        font-size: 1.4em;
-        padding: 0.7em;
-    }
+        .slide-media {
+            height: 348px;
+        }
 
-    .slide-position {
-        display: inline;
-        font-size: 0.6em;
-        float: right;
-        padding: 0.55em 0;
+        .slide-title {
+            display: inline;
+            float: left;
+            font-size: 1.4em;
+            padding: 0.7em;
+        }
+
+        .slide-position {
+            display: inline;
+            font-size: 0.6em;
+            float: right;
+            padding: 0.55em 0;
+        }
     }
 }
