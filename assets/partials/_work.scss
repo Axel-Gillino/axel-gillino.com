@@ -73,7 +73,7 @@
     align-items: center;
     background-color: black;
     border-radius: 4px;
-    bottom: 13px;
+    bottom: 14px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 12px 22px rgba(0, 0, 0, 0.15);
     color: white;
     display: none;
@@ -88,11 +88,6 @@
     text-decoration: none;
     top: 10px;
     transition: box-shadow 0.3s ease;
-}
-
-.grid-item:hover .work-overlay {
-    display: flex;
-    opacity: 0.8;
 }
 
 @keyframes fadeIn {
@@ -117,5 +112,10 @@
     .grid-item {
         flex-basis: 33.333%;
         max-width: 33.333%;
+    }
+
+    .grid-item:hover .work-overlay {
+        display: flex;
+        opacity: 0.8;
     }
 }
