@@ -4,7 +4,8 @@
 @import "../vendors/animate-sass/animate";
 
 .gallery {
-    margin-bottom: 4em 0 2.5em;
+    margin: 4em 0 2.5em 0;
+    overflow-y: hidden;
 
     a {
         text-decoration: none;
@@ -92,6 +93,7 @@
 @media only screen and (max-width: 1024px) {
     .gallery {
         margin-bottom: 0;
+        height: 350px;
 
         h3.slides-heading {
             margin: 10px 0 25px 0.4em;
@@ -136,6 +138,7 @@
 
 @media only screen and (min-width: 1025px) {
     .gallery {
+        height: 515px;
 
         h3.slides-heading {
             margin: 10px 0 25px 1em;
