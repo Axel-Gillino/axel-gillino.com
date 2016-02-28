@@ -47,7 +47,15 @@ h1 {
         margin-bottom: 75px;
     }
 
-    .brand img { height: 30px; }
+    .brand img {
+        height: 30px;
+        margin: 25px 0 0 25px;
+    }
+
+    .nav {
+        top: 30px;
+        right: 30px;
+    }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -63,8 +71,8 @@ h1 {
 @media only screen and (min-width: 1025px) {
     h1 {
         font-size: 5.5em;
-        margin-top: 130px;
-        margin-bottom: 130px;
+        margin-top: 150px;
+        margin-bottom: 150px;
     }
 
     .brand img { height: 60px; }
