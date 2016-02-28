@@ -59,17 +59,20 @@
 }
 
 @media only screen and (min-width: 1025px) {
-    .avatar {
-        max-width: 485px;
-    }
+    .intro {
 
-    .lead {
-        font-size: 1.65em;
-    }
+        .avatar {
+            max-width: 485px;
+        }
 
-    p {
-        font-size: 1.3em;
-        line-height: 1.55em;
+        .lead {
+            font-size: 1.65em;
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.55em;
+        }
     }
 }
 
