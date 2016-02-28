@@ -10,11 +10,7 @@
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-    width: 25px;
-    height: 25px;
     position: absolute;
-    right: 45px;
-    top: 50px;
     overflow: hidden;
     border: none;
     background: url(../images/cross.svg) no-repeat center center;
@@ -46,12 +42,15 @@
     display: block;
     height: 20%;
     height: calc(100% / 5);
+    // max-height: 800px;
     min-height: 54px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .overlay ul li a {
+    font-family: "futura-pt";
+    letter-spacing: 0.04em;
     font-size: 54px;
     font-weight: 300;
     display: block;
@@ -90,4 +89,22 @@
     transform: scale(1);
     -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
     transition: transform 0.4s, opacity 0.4s;
+}
+
+@media only screen and (max-width: 1024px) {
+        .overlay .overlay-close {
+            width: 25px;
+            height: 25px;
+            right: 45px;
+            top: 50px;
+        }
+}
+
+@media only screen and (min-width: 1025px) {
+    .overlay .overlay-close {
+        width: 25px;
+        height: 25px;
+        right: 47px;
+        top: 50px;
+    }
 }
