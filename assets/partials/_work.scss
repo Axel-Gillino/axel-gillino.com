@@ -90,6 +90,11 @@
     transition: box-shadow 0.3s ease;
 }
 
+
+.grid-item:hover .work-overlay {
+    display: flex;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 0.8; }
@@ -106,6 +111,10 @@
         margin-top: -251px;
     }
 
+    .grid-item:hover .work-overlay {
+        opacity: 0;
+    }
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -113,9 +122,8 @@
         flex-basis: 33.333%;
         max-width: 33.333%;
     }
-
+    
     .grid-item:hover .work-overlay {
-        display: flex;
-        opacity: 0.8;
-    }
+            opacity: 0.8;
+        }
 }
