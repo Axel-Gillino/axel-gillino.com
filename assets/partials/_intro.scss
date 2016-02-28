@@ -38,19 +38,19 @@
 @media only screen and (max-width: 767px) {
     .intro {
         padding: 1em;
-    }
 
-    .lead {
-        font-size: 1.33em;
-    }
+        .lead {
+            font-size: 1.33em;
+        }
 
-    p {
-        font-size: 1em;
-        line-height: 1.7em;
-    }
+        p {
+            font-size: 1em;
+            line-height: 1.7em;
+        }
 
-    p:last-child {
-        margin-top: 2.1em;
+        p:last-child {
+            margin-top: 2.1em;
+        }
     }
 }
 
