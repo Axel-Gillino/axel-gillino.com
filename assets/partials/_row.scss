@@ -70,7 +70,7 @@
     .date { color: #5a6e7f; }
 
     .employer {
-        font-size: 0.95em;
+        // font-size: 0.95em;
         font-family: "futura-pt",sans-serif;
     }
 
@@ -80,21 +80,7 @@
     }
 }
 
-@media only screen and (max-width: 320px) {
-    .row-content li {
-        flex-basis: 50%;
-        width: 50%;
-        font-size: 1em;
-        padding: 0 0 20px;
-    }
-
-    // every other skill
-    .row-content li:nth-child(2n) {
-        padding-left: 20px;
-    }
-}
-
-@media only screen and (max-width: 321px) and (max-width: 414px) {
+@media only screen and  (max-width: 414px) {
     .row .row-title {
         flex-basis: 100%;
         width: 100%;
@@ -118,7 +104,13 @@
     }
 }
 
-@media only screen and (min-width: 415px) and (max-width: 768px) {
+@media only screen and (min-width: 415px) and (max-width: 799px) {
+    .skills li:last-child {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1023px) {
     .row .row-title {
         flex-basis: 100%;
         width: 100%;
@@ -131,15 +123,44 @@
         margin: 0 auto;
     }
 
+
     .row-content li {
-        flex-basis: 33%;
-        width: 33%;
+        flex-basis: 50%;
+        width: 50%;
         font-size: 1.3em;
         padding: 0 0 20px;
     }
+
+    .employer {
+        font-size: 1.3em;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
+    .row {
+        width: 75%;
+        max-width: 1024px;
+        margin: 0 auto 80px auto
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .row {
+        width: 75%;
+        max-width: 1024px;
+        margin: 0 auto 80px auto
+    }
+
+    .row-content li {
+        flex-basis: 33.3%;
+        width: 33.3%;
+        padding: 0 10px 20px 0px;
+        font-size: 1.3em;
+    }
+
+}
+
+@media only screen and (max-width: 1023px) {
     .row .row-title {
         margin: 65px 0 40px 0;
     }
@@ -163,7 +184,7 @@
     .subtext-desktop { display: none; }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
     .row {
         width: 75%;
         max-width: 1024px;
@@ -195,7 +216,7 @@
         margin-top: 140px;
     }
 
-    .employer {
+    .employer-name {
         font-size: 1.3em;
     }
 
