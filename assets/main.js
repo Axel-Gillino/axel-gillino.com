@@ -1,26 +1,25 @@
 (function() {
     'use strict'
 
-    $('.slide').on('mouseenter', function(e) {
-        $(this).find('.slide-overlay').fadeIn(250)
-    }).on('mouseleave', function(e) {
-        $(this).find('.slide-overlay').fadeOut(250)
-    })
+    $('a').on('click', function(evt) {
+        ga('send', 'event', 'Link', null, $(evt.target).attr('href'), null)
+    });
 
-    var triggerBtn = $('#trigger-overlay'),
-        overlay    = $('.overlay'),
-        closeBtn   = $('.overlay-close');
+    $('.slide')
+        .on('mouseenter', function(e) { $(this).find('.slide-overlay').fadeIn(250) })  
+        .on('mouseleave', function(e) { $(this).find('.slide-overlay').fadeOut(250) })
 
-    function toggleOverlay() {
+    var overlay = $('.overlay')
+    var toggleOverlay = function () {
         if( overlay.hasClass('open')) {
             overlay.removeClass('open');
             overlay.addClass('close');
-        } else {
-            overlay.addClass('open');
-            overlay.removeClass('close');
-        }
+            return
+        } 
+        overlay.addClass('open');
+        overlay.removeClass('close');
     }
 
-    triggerBtn.on( 'click', toggleOverlay );
-    closeBtn.on( 'click', toggleOverlay );
+    $('#trigger-overlay').on('click', toggleOverlay);
+    $('.overlay-close').on('click', toggleOverlay);
 })();
