@@ -4,7 +4,6 @@
 @import "../vendors/animate-sass/animate";
 
 .gallery {
-    margin: 4em 0 2.5em 0;
     overflow-y: hidden;
 
     a {
@@ -87,11 +86,65 @@
     }
 }
 
-@media only screen and (max-width: 767px) {}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+@media only screen and (max-width: 767px) {
+    .gallery {
+        margin: 4em 0 2.5em 0;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .gallery {
+        margin: 0 0 2.5em 0;
+        margin-bottom: 0;
+        height: 370px;
+
+        h3.slides-heading {
+            margin: 10px 0 25px 2.5em;
+        }
+
+        .slides {
+            height: 310px;
+        }
+
+        #slide-1 {
+            margin-left: 3.7em;
+        }
+
+        .slide {
+            width: 250px;
+
+            &:nth-child(1n) {
+                margin-left: 1.2em;
+            }
+
+            &:last-child {
+                margin-right: 1.2em;
+            }
+        }
+
+        .slide-media {
+            height: 175px;
+        }
+
+        .slide-title {
+            display: block;
+            float: none;
+            font-size: 1.4em;
+            padding: 0.5em 0 0.6em 0.8em;
+        }
+
+        .slide-position {
+            display: block;
+            float: none;
+            font-size: 0.6em;
+            text-align: left;
+            padding-top: 0.35em;
+        }
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .gallery {
+        margin: 4em 0 2.5em 0;
         margin-bottom: 0;
         height: 370px;
 
@@ -138,6 +191,7 @@
 
 @media only screen and (min-width: 1025px) {
     .gallery {
+        margin: 4em 0 2.5em 0;
         height: 530px;
 
         h3.slides-heading {

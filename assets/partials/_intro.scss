@@ -40,12 +40,14 @@
         padding: 1em;
 
         .lead {
-            font-size: 1.2em;
+            font-size: 1.33em;
+            text-align: justify;
         }
 
         p {
             font-size: 1em;
-            line-height: 1.7em;
+            line-height: 1.7em;            
+            text-align: justify;
         }
 
         p:last-child {
@@ -55,7 +57,21 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .intro {
+        .lead {
+            font-size: 1.35em;
+            line-height: 1.55em;
+        }
 
+        p {
+            font-size: 1.2em;
+            line-height: 1.7em;
+        }
+
+        p:last-child {
+            margin-top: 2.1em;
+        }
+    }
 }
 
 @media only screen and (min-width: 1025px) {
