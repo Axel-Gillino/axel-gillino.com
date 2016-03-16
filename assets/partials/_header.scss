@@ -69,6 +69,16 @@ h1 {
     .brand img { height: 40px; }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3.8em;
+        margin-top: 110px;
+        margin-bottom: 75px;
+    }
+
+    .brand img { height: 40px; }
+}
+
 @media only screen and (min-width: 1025px) {
     h1 {
         font-size: 5.5em;
