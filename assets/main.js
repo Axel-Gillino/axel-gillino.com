@@ -1,6 +1,13 @@
 (function() {
     'use strict'
 
+    $('.client').on('mouseenter', function (e) {
+        var bgColor = $(e.target).data('bg-color');
+        var fgColor = $(e.target).data('fg-color');
+        $('.clients').css('background-color', bgColor);
+        $(this).css('color', fgColor);
+    });
+
     $('a').on('click', function(evt) {
         ga('send', 'event', 'Link', null, $(evt.target).attr('href'), null)
     });
@@ -11,7 +18,7 @@
 
     var overlay = $('.overlay')
     var toggleOverlay = function () {
-        if( overlay.hasClass('open')) {
+        if (overlay.hasClass('open')) {
             overlay.removeClass('open');
             overlay.addClass('close');
             return
