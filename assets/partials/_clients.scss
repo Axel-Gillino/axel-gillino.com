@@ -1,0 +1,80 @@
+
+
+#client-jpmorgan img {
+    height: 25px;
+}
+
+#client-google img {
+    height: 25px;
+}
+
+#client-porsche img {
+    height: 10px;
+}
+
+#client-ubisoft img {
+    height: 50px;
+}
+
+#client-cbre img {
+    height: 25px;
+}
+
+#client-breather img {
+    height: 25px;
+}
+
+#client-sony img {
+    height: 25px;
+}
+
+#client-wwf img {
+    height: 75px;
+}
+
+#client-sidlee img {
+    height: 25px;
+}
+
+#client-bell img {
+    height: 25px;
+}
+
+#client-publicis img {
+    height: 50px;
+}
+
+#client-cbre img {
+    height: 25px;
+}
+
+#client-universal img {
+    height: 50px;
+}
+
+.clients {
+    width: 100%;
+    
+    .work-grid {
+        background-color: transparent;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .grid-item {
+        align-items: center;
+        flex-basis: 25%;
+        max-width: 25%;
+        padding: 60px 0 0 0;
+    }
+    
+    .grid-item img {
+        box-shadow: none;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+}
