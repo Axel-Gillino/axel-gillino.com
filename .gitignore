@@ -1,4 +1,5 @@
 assets/.sass-cache/*
+.sass-cache
 static
 
 ############
