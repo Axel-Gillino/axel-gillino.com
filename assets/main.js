@@ -1,8 +1,6 @@
 (function() {
     'use strict'
     
-    new WOW().init();
-    
     $('.client').on('mouseenter', function (e) {
         var bgColor = $(e.target).data('bg-color');
         var fgColor = $(e.target).data('fg-color');
@@ -27,5 +25,4 @@
 
     $('#trigger-overlay').on('click', toggleOverlay);
     $('.overlay-close').on('click', toggleOverlay);
-    
 })();
