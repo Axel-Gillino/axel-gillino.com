@@ -690,44 +690,60 @@ html {
     bottom: 13px;
     display: flex;
     opacity: 0.8; } }
-#client-jpmorgan img {
-  height: 25px; }
+.clients {
+  background-color: #2E2E2E;
+  color: white;
+  padding: 240px 0; }
+  .clients .row-title {
+    text-transform: uppercase;
+    font-family: "futura-pt",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: 75%; }
+  .clients svg {
+    fill: #fff; }
+  .clients span {
+    margin-top: 95px;
+    text-align: center; }
 
-#client-google img {
-  height: 25px; }
+#client-jpmorgan svg {
+  height: 25px !important; }
 
-#client-porsche img {
-  height: 10px; }
+#client-google svg {
+  height: 31px !important; }
 
-#client-ubisoft img {
-  height: 50px; }
+#client-porsche svg {
+  height: 9px !important; }
 
-#client-cbre img {
-  height: 25px; }
+#client-ubisoft svg {
+  height: 49.5px !important; }
 
-#client-breather img {
-  height: 25px; }
+#client-cbre svg {
+  height: 21px !important; }
 
-#client-sony img {
-  height: 25px; }
+#client-breather svg {
+  height: 25.5px !important; }
 
-#client-wwf img {
-  height: 75px; }
+#client-sony svg {
+  height: 17.5px !important; }
 
-#client-sidlee img {
-  height: 25px; }
+#client-wwf svg {
+  height: 73px !important; }
 
-#client-bell img {
-  height: 25px; }
+#client-sidlee svg {
+  height: 20px !important; }
 
-#client-publicis img {
-  height: 50px; }
+#client-bell svg {
+  height: 33.5px !important; }
 
-#client-cbre img {
-  height: 25px; }
+#client-publicis svg {
+  height: 48px !important; }
 
-#client-universal img {
-  height: 50px; }
+#client-universal svg {
+  height: 52.5px !important; }
 
 @media only screen and (max-width: 767px) {
   .clients {
@@ -747,14 +763,6 @@ html {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .clients {
     width: 100%; }
-    .clients .row-title {
-      color: #b0976d;
-      text-transform: uppercase;
-      flex-basis: 18%;
-      font-style: normal;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      width: 18%; }
     .clients .work-grid {
       background-color: transparent;
       align-items: center;
