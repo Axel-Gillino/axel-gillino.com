@@ -2,10 +2,11 @@
     'use strict'
     
     $('.client').on('mouseenter', function (e) {
-        var bgColor = $(e.target).data('bg-color');
-        var fgColor = $(e.target).data('fg-color');
-        $('.clients').css('background-color', bgColor);
-        $(this).css('color', fgColor);
+        $('.clients').css('background-color', $(e.target).data('bg-color'));
+        $('.clients svg').css('fill', $(e.target).data('fg-color'))
+    }).on('mouseout', function (e) {
+        $('.clients').css('background-color', '#2E2E2E');
+        $('.clients svg').css('fill', '#f9f9f9')
     });
 
     $('a').on('click', function(e) {
