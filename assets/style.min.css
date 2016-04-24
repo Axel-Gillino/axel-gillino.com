@@ -693,7 +693,7 @@ html {
 .clients {
   background-color: #2E2E2E;
   color: white;
-  padding: 240px 0; }
+  padding: 120px 0; }
   .clients .row-title {
     text-transform: uppercase;
     font-family: "futura-pt",sans-serif;
@@ -706,7 +706,7 @@ html {
   .clients svg {
     fill: #fff; }
   .clients span {
-    margin-top: 95px;
+    margin-top: 42.5px;
     text-align: center; }
 
 #client-jpmorgan svg {
