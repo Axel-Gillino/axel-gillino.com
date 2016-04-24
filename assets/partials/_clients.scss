@@ -1,8 +1,8 @@
 .clients {
     background-color: $body-background-color;
     color: white;
-    padding: 120px 0;
-    
+    padding: 110px 0;
+
     .row-title {
         text-transform: uppercase;
         font-family: "futura-pt",sans-serif;
@@ -14,14 +14,17 @@
         text-align: center;
         width: 75%;
     }
-    
+
     svg {
         fill: #fff;
     }
-    
+
     span {
-        margin-top:42.5px;
+        margin-top:42px;
         text-align: center;
+    }
+    .work-grid {
+        padding: 0;
     }
 }
 
@@ -38,7 +41,7 @@
 }
 
 #client-ubisoft svg {
-    height: 49.5px !important;
+    height: 49px !important;
 }
 
 #client-cbre svg {
@@ -46,11 +49,11 @@
 }
 
 #client-breather svg {
-    height: 25.5px !important;
+    height: 25px !important;
 }
 
 #client-sony svg {
-    height: 17.5px !important;
+    height: 17px !important;
 }
 
 #client-wwf svg {
@@ -62,7 +65,7 @@
 }
 
 #client-bell svg {
-    height: 33.5px !important;
+    height: 33px !important;
 }
 
 #client-publicis svg {
@@ -70,26 +73,26 @@
 }
 
 #client-universal svg {
-    height: 52.5px !important;
+    height: 52px !important;
 }
 
 @media only screen and (max-width: 767px) {
     .clients {
         width: 100%;
-        
+
         .work-grid {
             background-color: transparent;
             align-items: center;
             align-content: center;
         }
-        
+
         .grid-item {
             align-items: center;
             flex-basis: 50%;
             max-width: 50%;
-            padding: 60px 0 0 0;
+            padding: 30px 0 0 0;
         }
-        
+
         .grid-item img {
             box-shadow: none;
             align-items: center;
@@ -99,22 +102,22 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
     .clients {
-                
+
         width: 100%;
-        
+
         .work-grid {
             background-color: transparent;
             align-items: center;
             align-content: center;
         }
-        
+
         .grid-item {
             align-items: center;
             flex-basis: 33.3%;
             max-width: 33.3%;
-            padding: 60px 0 0 0;
+            padding: 30px 0 0 0;
         }
-        
+
         .grid-item img {
             box-shadow: none;
             align-items: center;
@@ -125,20 +128,20 @@
 @media only screen and (min-width: 1025px) {
     .clients {
         width: 100%;
-        
+
         .work-grid {
             background-color: transparent;
             align-items: center;
             align-content: center;
         }
-        
+
         .grid-item {
             align-items: center;
             flex-basis: 25%;
             max-width: 25%;
-            padding: 60px 0 0 0;
+            padding: 30px 0 0 0;
         }
-        
+
         .grid-item img {
             box-shadow: none;
             align-items: center;
