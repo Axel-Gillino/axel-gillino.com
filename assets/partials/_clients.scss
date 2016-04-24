@@ -52,29 +52,74 @@
     height: 50px;
 }
 
-.clients {
-    width: 100%;
-    
-    .work-grid {
-        background-color: transparent;
-        align-items: center;
-        align-content: center;
-    }
-    
-    .grid-item {
-        align-items: center;
-        flex-basis: 25%;
-        max-width: 25%;
-        padding: 60px 0 0 0;
-    }
-    
-    .grid-item img {
-        box-shadow: none;
-        align-items: center;
+@media only screen and (max-width: 767px) {
+    .clients {
+        width: 100%;
+        
+        .work-grid {
+            background-color: transparent;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .grid-item {
+            align-items: center;
+            flex-basis: 50%;
+            max-width: 50%;
+            padding: 60px 0 0 0;
+        }
+        
+        .grid-item img {
+            box-shadow: none;
+            align-items: center;
+        }
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    .clients {
+        width: 100%;
+        
+        .work-grid {
+            background-color: transparent;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .grid-item {
+            align-items: center;
+            flex-basis: 33.3%;
+            max-width: 33.3%;
+            padding: 60px 0 0 0;
+        }
+        
+        .grid-item img {
+            box-shadow: none;
+            align-items: center;
+        }
+    }
+}
 
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (min-width: 1025px) {
+    .clients {
+        width: 100%;
+        
+        .work-grid {
+            background-color: transparent;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .grid-item {
+            align-items: center;
+            flex-basis: 25%;
+            max-width: 25%;
+            padding: 60px 0 0 0;
+        }
+        
+        .grid-item img {
+            box-shadow: none;
+            align-items: center;
+        }
+    }
 }
