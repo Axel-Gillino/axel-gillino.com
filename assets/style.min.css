@@ -747,6 +747,14 @@ html {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .clients {
     width: 100%; }
+    .clients .row-title {
+      color: #b0976d;
+      text-transform: uppercase;
+      flex-basis: 18%;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      width: 18%; }
     .clients .work-grid {
       background-color: transparent;
       align-items: center;
