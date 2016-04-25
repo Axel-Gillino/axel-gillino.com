@@ -2,6 +2,13 @@
 @import '../vendors/neat/app/assets/stylesheets/neat';
 @import 'variables';
 
+::selection {
+  background: #D5F0EF; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #D5F0EF; /* Gecko Browsers */
+}
+
 body {
     // Addresses a small issue in webkit: http://bit.ly/NEdoDq
     -webkit-backface-visibility: hidden;
