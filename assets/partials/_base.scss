@@ -5,62 +5,41 @@
 ::selection {
   background: #D5F0EF; /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
   background: #D5F0EF; /* Gecko Browsers */
 }
 
 body {
-    // Addresses a small issue in webkit: http://bit.ly/NEdoDq
-    -webkit-backface-visibility: hidden;
+    background-color: $body-background-color;
     -webkit-font-smoothing: antialiased;
     width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
 .container {
     @include outer-container(100%);
-
     background-color: $container-background-color;
-
-    &:after {
-        background: $body-background-color;
-    }
+    &:after { background: $body-background-color; }
 }
 
 @media only screen and (max-width: 767px) {
     body {
-        background-color: $body-background-color;
-
-
-        .mobile  { display: block; }
-        .desktop { display: none; }
-
-        .container {
-            margin: 0;
-        }
+        .mobile    { display: block; }
+        .desktop   { display: none; }
+        .container { margin: 0; }
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-    .mobile  { display: block; }
-    .desktop { display: none; }
-
-    .container {
-        margin: 0;
-    }
+    .mobile    { display: block; }
+    .desktop   { display: none; }
+    .container { margin: 0; }
 }
 
 @media only screen and (min-width: 1025px) {
-    body { background: $body-background-color; }
-
-    .mobile  { display: none; }
-    .desktop { display: block; }
-
-    .container {
-        margin: $container-border-width;
-    }
+    .mobile    { display: none; }
+    .desktop   { display: block; }
+    .container { margin: $container-border-width; }
 }

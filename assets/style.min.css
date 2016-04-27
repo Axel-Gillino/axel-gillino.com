@@ -19,6 +19,7 @@ html {
   /* Gecko Browsers */ }
 
 body {
+  background-color: #2E2E2E;
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   width: 100%; }
@@ -39,14 +40,12 @@ a {
     background: #2E2E2E; }
 
 @media only screen and (max-width: 767px) {
-  body {
-    background-color: #2E2E2E; }
-    body .mobile {
-      display: block; }
-    body .desktop {
-      display: none; }
-    body .container {
-      margin: 0; } }
+  body .mobile {
+    display: block; }
+  body .desktop {
+    display: none; }
+  body .container {
+    margin: 0; } }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .mobile {
     display: block; }
@@ -57,9 +56,6 @@ a {
   .container {
     margin: 0; } }
 @media only screen and (min-width: 1025px) {
-  body {
-    background: #2E2E2E; }
-
   .mobile {
     display: none; }
 
@@ -629,7 +625,7 @@ html {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05); }
 
 .work-overlay {
-  animation: fadeIn 0.25s;
+  animation: fadeIn 0.25s reverse;
   align-items: center;
   background-color: black;
   border-radius: 4px;
@@ -642,23 +638,27 @@ html {
   left: 10px;
   line-height: 1.6em;
   justify-content: center;
-  opacity: 0;
   position: absolute;
   right: 10px;
   text-decoration: none;
-  top: 10px;
-  transition: box-shadow 0.3s ease; }
+  top: 10px; }
 
 @keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 0.8; } }
+@keyframes fadeOut {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
 @media only screen and (max-width: 768px) {
   .work-overlay {
     display: none; } }
 @media only screen and (min-width: 769px) {
   .grid-item:hover .work-overlay {
+    animation: fadeIn 0.25s linear;
     display: flex;
     opacity: 0.8; } }
 @media only screen and (max-width: 1024px) {

@@ -6,7 +6,7 @@
         $('.clients svg').css('fill', $(e.target).data('fg-color'));
         $('.clients .row-title').css('color', $(e.target).data('fg-color'));
     });
-    
+
     $('html').on('click', function (e) {
         if ( ! $(e.target).hasClass('client') ) {
             $('.clients').css('background-color', '#2E2E2E');
