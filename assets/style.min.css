@@ -231,8 +231,8 @@ html {
     height: 2px;
     width: 55px; }
   .gallery .slides {
-    cursor: grab;
     border-radius: 0.001px;
+    cursor: move;
     overflow-x: scroll;
     width: 100%;
     white-space: nowrap;
@@ -724,45 +724,44 @@ html {
   .clients .work-grid {
     padding: 90px 0 0 0; }
   .clients .grid-item {
-    align-items: center;
-    padding: 60px 0;
-    height: 0; }
+    align-items: top stretch;
+    padding: 30px 0; }
 
 #client-jpmorgan svg {
-  height: 25px !important; }
+  height: 25px; }
 
 #client-google svg {
-  height: 31px !important; }
+  height: 31px; }
 
 #client-porsche svg {
-  height: 9px !important; }
+  height: 9px; }
 
 #client-ubisoft svg {
-  height: 49px !important; }
+  height: 49px; }
 
 #client-cbre svg {
-  height: 21px !important; }
+  height: 21px; }
 
 #client-breather svg {
-  height: 25px !important; }
+  height: 25px; }
 
 #client-sony svg {
-  height: 17px !important; }
+  height: 17px; }
 
 #client-wwf svg {
-  height: 73px !important; }
+  height: 73px; }
 
 #client-sidlee svg {
-  height: 20px !important; }
+  height: 20px; }
 
 #client-bell svg {
-  height: 33px !important; }
+  height: 33px; }
 
 #client-publicis svg {
-  height: 48px !important; }
+  height: 48px; }
 
 #client-universal svg {
-  height: 52px !important; }
+  height: 52px; }
 
 @media only screen and (max-width: 767px) {
   .clients {
@@ -775,8 +774,7 @@ html {
       align-items: center;
       flex-basis: 50%;
       max-width: 50%;
-      padding: 60px;
-      height: 0; }
+      padding: 30px 0; }
     .clients .grid-item img {
       box-shadow: none;
       align-items: center; } }

@@ -8,11 +8,11 @@
     });
 
     $('html').on('click', function (e) {
-        if ( ! $(e.target).hasClass('client') ) {
-            $('.clients').css('background-color', '#2E2E2E');
-            $('.clients svg').css('fill', '#f9f9f9');
-            $('.clients .row-title').css('color', '#fff');
-        }
+        if ($(e.target).hasClass('client')) return
+
+        $('.clients').css('background-color', '#2E2E2E');
+        $('.clients svg').css('fill', '#f9f9f9');
+        $('.clients .row-title').css('color', '#fff');
     });
 
     var draggingGallery;

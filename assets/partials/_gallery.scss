@@ -28,8 +28,8 @@
     }
 
     .slides {
-        cursor: grab;
         border-radius: 0.001px;
+        cursor: move;
         overflow-x: scroll;
         width: 100%;
         white-space: nowrap;
