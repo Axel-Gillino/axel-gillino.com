@@ -1,6 +1,6 @@
 (function() {
     'use strict'
-    
+
     $('.client').on('click', function (e) {
         $('.clients').css('background-color', $(e.target).data('bg-color'));
         $('.clients svg').css('fill', $(e.target).data('fg-color'));
@@ -13,6 +13,19 @@
             $('.clients svg').css('fill', '#f9f9f9');
             $('.clients .row-title').css('color', '#fff');
         }
+    });
+
+    var draggingGallery;
+    $('.slides').on('mousedown', function() {
+        draggingGallery = true;
+        $('.slides').on('mousemove', function() {
+            draggingGallery = false;
+            return;
+        });
+
+        $('.slides a').on('click', function() {
+            return draggingGallery;
+        });
     });
 
     $('a').on('click', function(e) {

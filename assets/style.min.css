@@ -231,11 +231,12 @@ html {
     height: 2px;
     width: 55px; }
   .gallery .slides {
-    overflow-x: auto;
+    cursor: grab;
+    border-radius: 0.001px;
+    overflow-x: scroll;
     width: 100%;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 0.001px; }
+    -webkit-overflow-scrolling: touch; }
   .gallery .slide {
     background-color: #fff;
     border-radius: 4px;
@@ -722,6 +723,10 @@ html {
     transition: all 500ms; }
   .clients .work-grid {
     padding: 90px 0 0 0; }
+  .clients .grid-item {
+    align-items: center;
+    padding: 60px 0;
+    height: 0; }
 
 #client-jpmorgan svg {
   height: 25px !important; }
@@ -770,7 +775,8 @@ html {
       align-items: center;
       flex-basis: 50%;
       max-width: 50%;
-      padding: 30px 0 0 0; }
+      padding: 60px;
+      height: 0; }
     .clients .grid-item img {
       box-shadow: none;
       align-items: center; } }
@@ -784,8 +790,7 @@ html {
     .clients .grid-item {
       align-items: center;
       flex-basis: 33.3%;
-      max-width: 33.3%;
-      padding: 30px 0 0 0; }
+      max-width: 33.3%; }
     .clients .grid-item img {
       box-shadow: none;
       align-items: center; } }
@@ -799,8 +804,7 @@ html {
     .clients .grid-item {
       align-items: center;
       flex-basis: 25%;
-      max-width: 25%;
-      padding: 30px 0 0 0; }
+      max-width: 25%; }
     .clients .grid-item img {
       box-shadow: none;
       align-items: center; } }

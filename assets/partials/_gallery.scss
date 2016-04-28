@@ -28,11 +28,12 @@
     }
 
     .slides {
-        overflow-x: auto;
+        cursor: grab;
+        border-radius: 0.001px;
+        overflow-x: scroll;
         width: 100%;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
-        border-radius: 0.001px;
     }
 
     .slide {
