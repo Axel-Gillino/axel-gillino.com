@@ -8,7 +8,10 @@
     });
 
     $('html').on('click', function (e) {
+        console.log($(e.target))
         if ($(e.target).hasClass('client')) return
+        if ($(e.target).hasClass('work-grid')) return
+
 
         $('.clients').css('background-color', '#2E2E2E');
         $('.clients svg').css('fill', '#f9f9f9');
