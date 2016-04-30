@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>cross-ico</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M152,259 L140,259 L140,260 L152,260 L152,272 L153,272 L153,260 L165,260 L165,259 L153,259 L153,247 L152,247 L152,259 Z" id="path-1"></path>
+    </defs>
+    <g id="Fabien" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Confirmation---Closed-Copy-5" transform="translate(-140.000000, -247.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="cross-ico" fill="#FFFFFF" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

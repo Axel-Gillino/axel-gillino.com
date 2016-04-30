@@ -41,9 +41,8 @@
 .overlay ul li {
     display: block;
     height: 20%;
-    height: calc(100% / 5);
-    // max-height: 800px;
-    min-height: 54px;
+    max-height: 100px;
+    min-height: 50px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
