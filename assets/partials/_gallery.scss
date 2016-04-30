@@ -95,9 +95,8 @@
 
 @media only screen and (max-width: 1024px) {
     .gallery {
-        margin: 4em 0 2.5em 0;
-        margin-bottom: 0;
-        // height: 370px;
+        margin: 4em 0 0.5em 0;
+        height: 370px;
 
         h3.slides-heading {
             margin: 10px 0 25px 0.4em;
@@ -266,7 +265,6 @@
 
         .slide-title {
             display: inline;
-            float: left;
             font-size: 1.4em;
             padding: 0.7em;
         }
@@ -274,7 +272,6 @@
         .slide-position {
             display: inline;
             font-size: 0.6em;
-            float: right;
             padding: 0.55em 0;
         }
     }

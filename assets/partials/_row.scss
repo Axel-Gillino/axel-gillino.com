@@ -92,21 +92,15 @@
         font-size: 1em;
         padding: 0 0 20px;
     }
+}
 
-    // last skill
+@media only screen and (max-width: 799px) {
     .skills li:last-child {
         display: none;
     }
 
-    // every other skill
-    // .row-content li:nth-child(2n) {
-    //     padding-left: 20px;
-    // }
-}
-
-@media only screen and (min-width: 415px) and (max-width: 799px) {
-    .skills li:last-child {
-        display: none;
+    .current.row {
+        margin-bottom: 100px;
     }
 }
 
@@ -120,9 +114,11 @@
         margin: 0 20px;
         width: 90%;
         max-width: 675px;
-        margin: 0 auto;
     }
 
+    .current.row {
+        margin-bottom: 100px;
+    }
 
     .row-content li {
         flex-basis: 50%;
@@ -148,7 +144,6 @@
     .row {
         width: 75%;
         max-width: 1024px;
-        margin: 0 auto 100px auto
     }
 
     .row-content li {
@@ -161,26 +156,13 @@
 }
 
 @media only screen and (max-width: 1023px) {
-    .row .row-title {
-        margin: 65px 0 40px 0;
-    }
-
-    // every other skill
-    .row-content li:nth-child(2n) {
-        // width: 0;
-    }
-
+    .row .row-title { margin: 65px 0 40px 0; }
     .row-title { width: 100%; }
     .row-content { width: 100%; }
-
-    .employer {
-        line-height: 2.2em;
-    }
-
+    .employer { line-height: 2.2em; }
     .employer-logo { display: none; }
     .employer-info { display: none; }
     .employment-details { margin: 0; }
-
     .subtext-desktop { display: none; }
 }
 
@@ -233,7 +215,7 @@
     }
 
     .subtext-mobile { display: none; }
-    // .current-role .subtext { display: none; }
+
 }
 
 @media only screen and (min-width: 1024) {

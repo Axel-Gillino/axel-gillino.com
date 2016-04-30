@@ -20,7 +20,6 @@ html {
 
 body {
   background-color: #2E2E2E;
-  -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   width: 100%; }
 
@@ -279,8 +278,8 @@ html {
     margin: 4em 0 2.5em 0; } }
 @media only screen and (max-width: 1024px) {
   .gallery {
-    margin: 4em 0 2.5em 0;
-    margin-bottom: 0; }
+    margin: 4em 0 0.5em 0;
+    height: 370px; }
     .gallery h3.slides-heading {
       margin: 10px 0 25px 0.4em; }
     .gallery .slides {
@@ -379,13 +378,11 @@ html {
       height: 348px; }
     .gallery .slide-title {
       display: inline;
-      float: left;
       font-size: 1.4em;
       padding: 0.7em; }
     .gallery .slide-position {
       display: inline;
       font-size: 0.6em;
-      float: right;
       padding: 0.55em 0; } }
 html {
   box-sizing: border-box; }
@@ -457,13 +454,13 @@ html {
     flex-basis: 50%;
     width: 50%;
     font-size: 1em;
-    padding: 0 0 20px; }
+    padding: 0 0 20px; } }
+@media only screen and (max-width: 799px) {
+  .skills li:last-child {
+    display: none; }
 
-  .skills li:last-child {
-    display: none; } }
-@media only screen and (min-width: 415px) and (max-width: 799px) {
-  .skills li:last-child {
-    display: none; } }
+  .current.row {
+    margin-bottom: 100px; } }
 @media only screen and (min-width: 415px) and (max-width: 1023px) {
   .row .row-title {
     flex-basis: 100%;
@@ -472,8 +469,10 @@ html {
   .row {
     margin: 0 20px;
     width: 90%;
-    max-width: 675px;
-    margin: 0 auto; }
+    max-width: 675px; }
+
+  .current.row {
+    margin-bottom: 100px; }
 
   .row-content li {
     flex-basis: 50%;
@@ -491,8 +490,7 @@ html {
 @media only screen and (min-width: 800px) {
   .row {
     width: 75%;
-    max-width: 1024px;
-    margin: 0 auto 100px auto; }
+    max-width: 1024px; }
 
   .row-content li {
     flex-basis: 33.3%;
@@ -727,45 +725,11 @@ html {
     align-items: top stretch;
     padding: 30px 0; }
 
-#client-jpmorgan svg {
-  height: 25px; }
-
-#client-google svg {
-  height: 31px; }
-
-#client-porsche svg {
-  height: 9px; }
-
-#client-ubisoft svg {
-  height: 49px; }
-
-#client-cbre svg {
-  height: 21px; }
-
-#client-breather svg {
-  height: 25px; }
-
-#client-sony svg {
-  height: 17px; }
-
-#client-wwf svg {
-  height: 73px; }
-
-#client-sidlee svg {
-  height: 20px; }
-
-#client-bell svg {
-  height: 33px; }
-
-#client-publicis svg {
-  height: 48px; }
-
-#client-universal svg {
-  height: 52px; }
-
 @media only screen and (max-width: 767px) {
   .clients {
     width: 100%; }
+    .clients .row-title {
+      font-size: 1.2em; }
     .clients .work-grid {
       background-color: transparent;
       align-items: center;
@@ -777,10 +741,48 @@ html {
       padding: 30px 0; }
     .clients .grid-item img {
       box-shadow: none;
-      align-items: center; } }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+      align-items: center; }
+
+  #client-jpmorgan svg {
+    height: 20.25px; }
+
+  #client-google svg {
+    height: 22.75px; }
+
+  #client-porsche svg {
+    height: 6.75px; }
+
+  #client-ubisoft svg {
+    height: 36.75px; }
+
+  #client-cbre svg {
+    height: 15.75px; }
+
+  #client-breather svg {
+    height: 20.25px; }
+
+  #client-sony svg {
+    height: 12.75px; }
+
+  #client-wwf svg {
+    height: 48px; }
+
+  #client-sidlee svg {
+    height: 15px; }
+
+  #client-bell svg {
+    height: 24.75px; }
+
+  #client-publicis svg {
+    height: 36px; }
+
+  #client-universal svg {
+    height: 39px; } }
+@media only screen and (min-width: 768px) {
   .clients {
     width: 100%; }
+    .clients .row-title {
+      font-size: 10px; }
     .clients .work-grid {
       background-color: transparent;
       align-items: center;
@@ -791,7 +793,43 @@ html {
       max-width: 33.3%; }
     .clients .grid-item img {
       box-shadow: none;
-      align-items: center; } }
+      align-items: center; }
+
+  #client-jpmorgan svg {
+    height: 25px; }
+
+  #client-google svg {
+    height: 31px; }
+
+  #client-porsche svg {
+    height: 9px; }
+
+  #client-ubisoft svg {
+    height: 49px; }
+
+  #client-cbre svg {
+    height: 21px; }
+
+  #client-breather svg {
+    height: 25px; }
+
+  #client-sony svg {
+    height: 17px; }
+
+  #client-wwf svg {
+    height: 73px; }
+
+  #client-sidlee svg {
+    height: 20px; }
+
+  #client-bell svg {
+    height: 33px; }
+
+  #client-publicis svg {
+    height: 48px; }
+
+  #client-universal svg {
+    height: 52px; } }
 @media only screen and (min-width: 1025px) {
   .clients {
     width: 100%; }
