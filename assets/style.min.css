@@ -730,7 +730,7 @@ html {
   .clients {
     width: 100%; }
     .clients .row-title {
-      font-size: 1.2em; }
+      font-size: 10px; }
     .clients .work-grid {
       background-color: transparent;
       align-items: center;
@@ -779,11 +779,12 @@ html {
 
   #client-universal svg {
     height: 39px; } }
+@media only screen and (max-width: 925px) {
+  .clients .row-title {
+    font-size: 10px; } }
 @media only screen and (min-width: 768px) {
   .clients {
     width: 100%; }
-    .clients .row-title {
-      font-size: 10px; }
     .clients .work-grid {
       background-color: transparent;
       align-items: center;
