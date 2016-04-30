@@ -264,13 +264,14 @@
         }
 
         .slide-title {
-            display: inline;
+            display: inline-block;
             font-size: 1.4em;
             padding: 0.7em;
         }
 
         .slide-position {
-            display: inline;
+            display: inline-block;
+            float: right;
             font-size: 0.6em;
             padding: 0.55em 0;
         }

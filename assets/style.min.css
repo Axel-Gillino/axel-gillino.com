@@ -377,11 +377,12 @@ html {
     .gallery .slide-media {
       height: 348px; }
     .gallery .slide-title {
-      display: inline;
+      display: inline-block;
       font-size: 1.4em;
       padding: 0.7em; }
     .gallery .slide-position {
-      display: inline;
+      display: inline-block;
+      float: right;
       font-size: 0.6em;
       padding: 0.55em 0; } }
 html {
@@ -883,8 +884,8 @@ html {
 .overlay ul li {
   display: block;
   height: 20%;
-  height: calc(100% / 5);
-  min-height: 54px;
+  max-height: 100px;
+  min-height: 50px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
