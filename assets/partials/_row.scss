@@ -1,230 +1,253 @@
-@import '../vendors/bourbon/app/assets/stylesheets/bourbon';
-@import '../vendors/neat/app/assets/stylesheets/neat';
-@import 'variables';
+@import "../vendors/bourbon/app/assets/stylesheets/bourbon";
+@import "../vendors/neat/app/assets/stylesheets/neat";
+@import "variables";
 
 .row {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "futura-pt", sans-serif;
+  margin: 0 0 0 20px;
+
+  .row-title {
+    color: $heading-color;
+    text-transform: uppercase;
+    flex-basis: 18%;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    width: 18%;
+  }
+
+  ul {
     display: flex;
     flex-wrap: wrap;
-    font-family: "futura-pt",sans-serif;
-    margin: 0 0 0 20px;
+    list-style-type: none;
+    padding: 0;
+  }
 
-    .row-title {
-        color: $heading-color;
-        text-transform: uppercase;
-        flex-basis: 18%;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: 0.15em;
-        width: 18%;
-    }
-
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        text-decoration: none;
-        line-height: 1.3em;
-        white-space: nowrap;
-        font-size: 0.95em;
-        letter-spacing: 0.04em;
-        padding: 0 0 10px 0;
-        font-weight: 400;
-    }
+  li {
+    text-decoration: none;
+    line-height: 1.3em;
+    white-space: nowrap;
+    font-size: 0.95em;
+    letter-spacing: 0.04em;
+    padding: 0 0 10px 0;
+    font-weight: 400;
+  }
 }
 
 .employer {
-    letter-spacing: 0.04em;
+  letter-spacing: 0.04em;
 
-    a {
-        color: #495A6C;
-        text-decoration: underline;
-    }
+  a {
+    color: #495a6c;
+    text-decoration: underline;
+  }
 
-    .employer-logo {
-        background-image: url('../images/breather.svg');
-        background-repeat: no-repeat;
-        float: left;
-        margin: 25px 50px 0 10px;
-        height: 64px;
-        width: 64px;
-    }
+  .employer-logo {
+    background-image: url("../images/breather.svg");
+    background-repeat: no-repeat;
+    float: left;
+    margin: 25px 50px 0 10px;
+    height: 64px;
+    width: 64px;
+  }
 
-    .current-role {
-        margin: 0;
-    }
+  .current-role {
+    margin: 0;
+  }
 
-    .employer-logo {
-        margin: 25px 50px 0 10px;
-        height: 100px;
-        width: 64px;
-    }
+  .employer-logo {
+    margin: 25px 50px 0 10px;
+    height: 100px;
+    width: 64px;
+  }
 
-    .employer-info {
-        padding-top: 20px;
-    }
+  .employer-info {
+    padding-top: 20px;
+  }
 
-    .date { color: #5a6e7f; }
+  .date {
+    color: #5a6e7f;
+  }
 
-    .employer {
-        // font-size: 0.95em;
-        font-family: "futura-pt",sans-serif;
-    }
+  .employer {
+    // font-size: 0.95em;
+    font-family: "futura-pt", sans-serif;
+  }
 
-    .city {
-        font-family: "adobe-garamond-pro";
-        font-style: italic;
-    }
+  .city {
+    font-family: "adobe-garamond-pro";
+    font-style: italic;
+  }
 }
 
-@media only screen and  (max-width: 414px) {
-    .row .row-title {
-        flex-basis: 100%;
-        width: 100%;
-    }
+@media only screen and (max-width: 414px) {
+  .row .row-title {
+    flex-basis: 100%;
+    width: 100%;
+  }
 
-    .row-content li {
-        flex-basis: 50%;
-        width: 50%;
-        font-size: 1em;
-        padding: 0 0 20px;
-    }
+  .row-content li {
+    flex-basis: 50%;
+    width: 50%;
+    font-size: 1em;
+    padding: 0 0 20px;
+  }
 }
 
 @media only screen and (max-width: 799px) {
-    .skills li:last-child {
-        display: none;
-    }
+  .skills li:last-child {
+    display: none;
+  }
 
-    .current.row {
-        margin-bottom: 100px;
-    }
+  .current.row {
+    margin-bottom: 100px;
+  }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 1023px) {
-    .row .row-title {
-        flex-basis: 100%;
-        width: 100%;
-    }
+  .row .row-title {
+    flex-basis: 100%;
+    width: 100%;
+  }
 
-    .row {
-        margin: 0 20px;
-        width: 90%;
-        max-width: 675px;
-    }
+  .row {
+    margin: 0 20px;
+    width: 90%;
+    max-width: 675px;
+  }
 
-    .current.row {
-        margin-bottom: 100px;
-    }
+  .current.row {
+    margin-bottom: 25px;
+  }
 
-    .row-content li {
-        flex-basis: 50%;
-        width: 50%;
-        font-size: 1.3em;
-        padding: 0 0 20px;
-    }
+  .former.row {
+    margin-bottom: 100px;
+  }
 
-    .employer {
-        font-size: 1.3em;
-    }
+  .row-content li {
+    flex-basis: 50%;
+    width: 50%;
+    font-size: 1.3em;
+    padding: 0 0 20px;
+  }
+
+  .employer {
+    font-size: 1.3em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .row {
-        width: 75%;
-        max-width: 1024px;
-        margin: 0 auto 100px auto
-    }
+  .row {
+    width: 75%;
+    max-width: 1024px;
+    margin: 0 auto 100px auto;
+  }
 }
 
 @media only screen and (min-width: 800px) {
-    .row {
-        width: 75%;
-        max-width: 1024px;
-    }
+  .row {
+    width: 75%;
+    max-width: 1024px;
+  }
 
-    .row-content li {
-        flex-basis: 33.3%;
-        width: 33.3%;
-        padding: 0 10px 20px 0px;
-        font-size: 1.3em;
-    }
-
+  .row-content li {
+    flex-basis: 33.3%;
+    width: 33.3%;
+    padding: 0 10px 20px 0px;
+    font-size: 1.3em;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    .row .row-title { margin: 65px 0 40px 0; }
-    .row-title { width: 100%; }
-    .row-content { width: 100%; }
-    .employer { line-height: 2.2em; }
-    .employer-logo { display: none; }
-    .employer-info { display: none; }
-    .employment-details { margin: 0; }
-    .subtext-desktop { display: none; }
+  .row .row-title {
+    margin: 65px 0 40px 0;
+  }
+  .row-title {
+    width: 100%;
+  }
+  .row-content {
+    width: 100%;
+  }
+  .employer {
+    line-height: 2.2em;
+  }
+  .employer-logo {
+    display: none;
+  }
+  .employer-info {
+    display: none;
+  }
+  .employment-details {
+    margin: 0;
+  }
+  .subtext-desktop {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    .row {
-        width: 75%;
-        max-width: 1024px;
-        margin: 0 auto 100px auto
+  .row {
+    width: 75%;
+    max-width: 1024px;
+    margin: 0 auto 100px auto;
+  }
+
+  .row-title {
+    font-size: 0.85em;
+    line-height: 2.3em;
+  }
+
+  .row-content {
+    flex-basis: 82%;
+    width: 82%;
+  }
+
+  .row-content ul {
+    margin: 0 auto 20px;
+  }
+
+  .row-content li {
+    flex-basis: 33.3%;
+    width: 33.3%;
+    padding: 0 10px 20px 10px;
+    font-size: 1.3em;
+  }
+
+  .skills {
+    margin-top: 140px;
+  }
+
+  .current-role .position {
+    display: none;
+  }
+
+  .employment-details {
+    margin-left: 25px;
+    font-size: 1.3em;
+
+    a {
+      text-decoration: none;
     }
+  }
 
-    .row-title {
-        font-size: 0.85em;
-        line-height: 2.3em;
-    }
+  .employer-info {
+    padding-bottom: 20px;
+  }
 
-    .row-content {
-        flex-basis: 82%;
-        width: 82%;
-    }
-
-    .row-content ul {
-        margin: 0 auto 20px;
-    }
-
-    .row-content li {
-        flex-basis: 33.3%;
-        width: 33.3%;
-        padding: 0 10px 20px 10px;
-        font-size: 1.3em;
-    }
-
-    .skills {
-        margin-top: 140px;
-    }
-
-    .current-role .position {
-        display: none;
-    }
-
-    .employment-details {
-        margin-left: 25px;
-        font-size: 1.3em;
-
-        a { text-decoration: none; }
-    }
-
-
-    .employer-info {
-        padding-bottom: 20px;
-    }
-
-    .subtext-mobile { display: none; }
-
+  .subtext-mobile {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1024) {
-    .row {
-        max-width: 1024px;
-        margin: 0 auto;
-    }
+  .row {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 
-    .row-content ul {
-        font-size: 1.3em;
-    }
+  .row-content ul {
+    font-size: 1.3em;
+  }
 }
